@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimoniala page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/headerfooter.css">
+    <style>.space-md, .contactus {
+        padding-bottom: 100px;
+    }
+    
+    .space, .contactus {
+        padding-top: 130px;
+    }
+    .contactus .animated {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+    }
+    .mt-n2 {
+        margin-top: -0.5rem;
+    }
+    
+    .contactus .text-theme {
+        color: #07ccec !important;
+    }
+    .contactus .form-group {
+        position: relative;
+    }
+    .contactus .form-select.style3, .contactus .form-control.style3 {
+        border: 2px solid #dee4eb;
+        background-color: #ffffff;
+    }
+    .contactus .form-select.style3, .contactus .form-select.style2, .contactus .form-control.style3, .contactus .form-control.style2 {
+        height: 60px;
+        color: #27477d;
+        font-size: 14px;
+        border-radius: 9999px;
+        padding-left: 30px;
+        transition: all ease .4s;
+    }
+    
+    .form-select, .form-control {
+        padding: 0 30px;
+        padding-right: 60px;
+        font-weight: 400;
+    }
+    .contactus .form-select.style3~i, .contactus .form-select.style2~i, .contactus .form-control.style3~i, .contactus .form-control.style2~i {
+        font-size: 16px;
+        top: 22px;
+        color: #27477d;
+        right: calc(var(--bs-gutter-x) + 15px);
+    }
+    .contactus .form-wrap3 {
+        --bs-gutter-x: 1rem;
+       
+    }
+    .contactus .form-group>i {
+        position: absolute;
+    }
+    .contactus textarea.form-control.style3, textarea.form-control.style2 {
+        border-radius: 20px;
+    }
+    .contactus textarea.form-control {
+        min-height: 150px;
+        padding-top: 17px;
+        padding-bottom: 17px;
+    }
+    
+    .sendmsg-btn.style3, .sendmsg-btn.style2 {
+        margin-left: calc(40px/2);
+    }
+    .sendmsg-btn {
+        position: relative;
+        display: inline-block;
+        border: none;
+        text-align: center;
+        background-color: #07ccec;
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 1;
+        font-weight: 700;
+        padding: 19.5px 48px;
+        border-radius: 9999px;
+    }
+    .sendmsg-btn.style3:before, .sendmsg-btn.style2:before {
+        content: "";
+        position: absolute;
+        left: calc(40px/-2);
+        top: 50%;
+        width: 40px;
+        height: 40px;
+        margin-top: calc(40px/-2);
+        background-color: #ffffff;
+        border-radius: 50%;
+        box-shadow: inset 0px 5px 5px 0px rgba(7,204,236,.3);
+        transition: inherit;
+    }
+    
+    .sendmsg-btn {
+        transition: all ease .4s;
+    }
+    .sendmsg-btn.style3 i, .sendmsg-btn.style2 i {
+        position: absolute;
+        left: calc(30px/-2);
+        top: 50%;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin-top: calc(30px/-2);
+        border-radius: 50%;
+        background-color: #07ccec;
+        font-size: 14px;
+        transition: inherit;
+    }
+    .sendmsg-btn i {
+        display: inline-block;
+    }
+    .sendmsg-btn.style2:hover, .sendmsg-btn.style3 {
+        background-color: #27477d;
+    }
+    .sendmsg-btn.style2:hover i, .sendmsg-btn.style3 i {
+        background-color: #27477d;
+    }
+    .sendmsg-btn:hover:before, .sendmsg-btn:hover i {
+        animation: shake .82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    }
+    @media (max-width: 1399px){
+    .contactus .form-wrap3 {
+        padding: 60px 60px 60px 60px;
+    }
+    }
+    
+    
+    /* <!-- Contact info --> */
+    .mb-30 {
+        margin-bottom: 30px;
+    }
+    .mb-10 {
+        margin-bottom: 10px;
+    }
+    .mb-15 {
+        margin-bottom: 15px;
+    }
+    .mt-n2 {
+        margin-top: -0.5rem;
+    }
+    .pt-15 {
+        padding-top: 15px;
+    }
+    
+    
+    .contactus .h1, .contactus h1, .contactus .h2, .contactus h2, .contactus .h3, 
+    .contactus h3, .contactus .h4, .contactus h4, .contactus .h5, .contactus h5, 
+    .contactus .h6, .contactus h6 {
+        color: #27477d;
+        text-transform: none;
+        font-weight: 700;
+        line-height: 1.3;
+        margin: 0 0 15px 0;
+    }
+    .contactus p {
+        margin: 0 0 15px 0;
+        color: #888c92;
+        line-height: 1.7;
+    }
+    
+    .contactus .contact-info-table {
+        margin: 0 0 1.5em;
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    .contactus .contact-info-table td {
+        border-bottom: 1px dashed #dfdfe0;
+        border-top: none;
+        padding-left: 0;
+        padding-right: 10px;
+    }
+    .contactus .contact-info-table td, .contact-info-table th {
+        padding: 9px;
+    }
+    .contact-info-table td+td {
+        padding-right: 0;
+        text-align: right;
+    }
+    
+    .contactus .contact-information .address {
+        font-size: 18px;
+    }
+    .contactus .contact-information .address i, .CustomerSupports i  {
+       margin-right: 0.5rem;
+    }
+    
+    .contactus .CustomerSupports a {
+        color: #07ccec;
+        text-decoration: none;
+        outline: 0;
+        transition: all ease .4s;
+    }</style>
+</head>
+<body>
+           <!-- header start -->
+    <header class="fixed-top" style="z-index: 3;">
+        <div style="background-color: #196087;" class="locandnum">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#196087" class=" p-2 bi bi-headset bg-white rounded-circle" viewBox="0 0 16 16">
+                        <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/>
+                    </svg>
+                    <p>Your Trusted Service Provider</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#196087" class="p-2 ml-3 bi bi-telephone-fill bg-white rounded-circle" viewBox="0 0 15 16">
+                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                    </svg>
+                    <p>+91 70133 25464</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#196087" class="p-2 ml-3 bg-white bi bi-geo-alt-fill rounded-circle" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                    </svg>
+                    <p>Mandapeta, Tarvanipeta 533308</p>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-md bg-white navbar-dark shadow ">
+            <a class="navbar-brand" href="#"><img src="/assets/images/mainLogo.jpg" alt="logo" width="200px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span ><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list bg-primary" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav ">
+                <li class="nav-item">
+                  <a class="nav-link"  style="color: #196087;" href="../../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  style="color: #196087;" href="./aboutus.html">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle ml-lg-3" data-toggle="dropdown"  style="color: #196087;">
+                        Department
+                    </a>
+                    <div class="dropdown-menu" >
+                        <a  class="dropdown-item" href="./ortho.html"  style="color: #196087;">Orthopedic</a>
+                        <a  class="dropdown-item" href="./neuro.html"  style="color: #196087;">neuro</a>
+                        <a  class="dropdown-item" href="./physio.html"  style="color: #196087;">Physiotheraphy</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown"  >
+                  <a href="#" class="nav-link dropdown-toggle ml-lg-3" data-toggle="dropdown"  style="color: #196087;">
+                      Our Doctors
+                  </a>
+                  <div class="dropdown-menu" >
+                      <a  class="dropdown-item" href="./doctor1.html"  style="color: #196087;">Dr. Mahesh Yaddanapudi</a>
+                      <a  class="dropdown-item" href="./doctor2.html"  style="color: #196087;">Dr. B. Sai Tejaswi </a>
+                  </div>
+              </li>
+                <li class="nav-item">
+                    <a class="nav-link"  style="color: #196087;" href="./contactus.html">Contact Us</a>
+                </li>
+               
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle ml-lg-3" data-toggle="dropdown"  style="color: #196087;">
+                        others
+                    </a>
+                    <div class="dropdown-menu" >
+                        <a  class="dropdown-item" href="./careers.html"  style="color: #196087;">Careers</a>
+                        <a  class="dropdown-item" href="./testimonial.html"  style="color: #196087;">Testimals</a>
+                    </div>
+                </li> 
+                <li class="nav-item">
+                  <button class="btn btn-primary but"><a href="./form.html">Book An Appointment</a></button>
+                </li>      
+              </ul>
+            </div>  
+          </nav>
+    </header>
+    <!-- header end -->
+
+        <!-- breadcrums start -->
+        <div class="breadcrumb-wrap bg-f br-2">
+            <div class="container">
+                <div class="breadcrumb-title">
+                    <h2>Contact Us</h2>
+                    <ul class="breadcrumb-menu list-style">
+                        <li><a href="../../index.html">Home</a></li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- contact us Start -->
+    <section class="vs-contact-wrapper vs-contact-layout1 space-top space-md-bottom contactus">
+        <div class="container">
+            <div class="row gx-60 align-items-center">
+                <div class="col-lg-6 wow fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: g;">
+                    <form action="mail.php" method="POST" class="ajax-contact form-wrap3 mb-30" data-bg-color="#f3f6f7" style="background-color: rgb(243, 246, 247);">
+                        <div class="form-title">
+                            <h3 class="mt-n2 fls-n2 mb-0">Send Us a Message</h3>
+                            <p class="text-theme mb-4">Your email address will not be published*</p>
+                        </div>
+                        <div class="form-group mb-15">
+                            <input type="text" class="form-control style3" name="name" id="name" placeholder="Name"> 
+                            <i class="bi bi-person"></i>
+                        </div>
+                        <div class="form-group mb-15">
+                            <input type="text" class="form-control style3" name="email" id="email" placeholder="E-mail"> 
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div class="form-group mb-15">
+                            <textarea name="message" id="message" cols="30" rows="3" class="form-control style3" placeholder="Message"></textarea> 
+                            <i class="bi bi-pencil-fill"></i>
+                        </div>
+                        <div class="form-btn pt-15">
+                            <button class="sendmsg-btn style2">Send Message<i class="bi bi-chevron-right"></i></button>
+                        </div>
+                        <p class="form-messages mb-0 mt-3"></p>
+                    </form>
+                </div> 
+             <!-- Contact Info Div Starts -->
+                <div class="col-lg-6">
+                    <div class="contact-information mb-30">
+                        <h2 class="mt-n2">We are here for help you! Arrange a meeting.</h2>
+                        <!-- <div class="row">
+                            <div class="col-xxl-10"> -->
+                                <p>Holisticly engage inexpensive architectures via high-quality solutions. Efficiently implement synergistic 
+                                    applications vis-a-vis best-of-breed ecommerce onotonectally enable client-based portals
+                                </p>
+                            <!-- </div>
+                        </div> -->
+                        <h3 class="h4 pt-2 mb-10">Opening Hours</h3>
+                            <table class="contact-info-table">
+                                <tbody>
+                                    <tr><td>Mon - Fri:</td><td>8.00 am - 8.00 pm</td></tr>
+                                    <tr><td>Saturday:</td><td>9.00 am - 6.00 pm</td></tr>
+                                    <tr><td>Sunday:</td><td>9.00 am - 6.00 pm</td></tr>
+                                </tbody>
+                            </table>
+                        <h4 class="pt-2 mb-10">Address</h4>
+                        <p class="fs-md address">
+                            <i class="bi bi-geo-alt-fill me-2"></i>tarvanipeta, Mandapeta
+                        </p>
+                        <h4 class="pt-2 mb-2">Customer Supports</h4>
+                            <h4 class="h3 font-theme2 mb-0 CustomerSupports">
+                                <a href="tel:+91 70133 25464"><i class="bi bi-phone-fill"></i>+91 70133 25464</a>
+                            </h4>
+                    </div>
+                </div>
+             <!-- Contact Info Div Ends -->
+            </div> <!-- Row ends -->
+        <!-- Location Div Starts -->
+            <div class="ratio ratio-21x9 contact-map mt-70 mb-30">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.1583088354!2d-74.11976389828038!3d40.697663748695746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1615903229405!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div> 
+        <!-- Location Div Ends -->
+        </div>      <!-- container ends -->
+    </section>		<!-- Section ends -->
+     <!-- footer -->
+     <footer class="main-footer">
+        <div class="footer-upper">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-widget logo-widget">
+                            <div class="logo">
+                                <img src="/assets/images/mainLogo.jpg" alt="Kadiyala Hospitals">
+                            </div>
+                            <ul class="social-icon-two">
+                                <li><a href=" target="_blank">
+                                <span class="bi bi-facebook"></span>
+                                </a></li>
+                                <li><a href="https://twitter.com/kadiyalahospitl" target="_blank"><span class="bi bi-instagram"></span></a></li>
+                                <li><a href="https://www.youtube.com/channel/UC_HeTKtlnElybftdTblM4Ww" target="_blank"><span class="bi bi-youtube"></span></a></li>
+                                <li><a href="https://www.instagram.com/kadiyalahospitals/" target="_blank"><span class="bi bi-twitter-x"></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-column col-6 col-lg-2 col-md-6 col-sm-12">
+                        <div class="footer-widget links-widget">
+                            <h4 class="widget-title">Quick Links</h4>
+                            <div class="widget-content">
+                                <ul class="list">
+                                    <li><a href="../../index.html">Home</a></li>
+                                    <li><a href="../html/aboutus.html">About</a></li>
+                                    <li><a href="images.html">Images</a></li>
+                                    <li><a href="../html/contactus.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-column col-6 col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-widget links-widget">
+                            <h4 class="widget-title">Useful Links</h4>
+                            <div class="widget-content">
+                                <ul class="list">
+                                  
+                                    <li><a href="./assets/html/neuro.html">Neurology </a></li>
+                                    <li><a href="./assets/html/physio.html">Physiotherapy </a></li>
+                                    <li><a href="./assets/html/ortho.html  ">Orthopaedics </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-column col-lg-4 col-md-6 col-sm-12">
+                        <div class="footer-widget contact-widget">
+                            <h4 class="widget-title">Contact Us</h4>
+                            <div class="widget-content">
+                                <ul class="contact-info">
+                                    <li><span class="icon bi bi-geo-alt"></span>Mandapeta, Tarvanipeta, East Godawari Andhra Pradesh 522601</li>
+                                    <li><span class="icon bi bi-phone"></span><a href="tel:7013325464">+91 7013325464</a></li>
+                                    <li><span class="icon bi bi-mailbox"></span><a href="mailto:saitejeswihospital@gmail.com">srisaitejeswihospital@gmail.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+          <label for="">Developer's Team</label>
+          <select name="" id="">
+            <option value="">K Vamsi</option>
+            <option value="">Anusha</option>
+            <option value=""> Pujitha</option>
+            <option value="">Anuhya</option>
+          </select>
+            <div class="auto-container clearfix">
+                <div class="copyright">© 2021 Sri Sai Tejeswi Hospitals All Rights Reserved</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

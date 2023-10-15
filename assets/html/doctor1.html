@@ -1,0 +1,212 @@
+<html>
+<head>
+<title>hospital-doctors</title>
+<meta charset="UTF-8" />
+		<title>title</title>
+		<title>Bootstrap Example</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<link rel="text/css" href="../css/doctors.css">
+<style>
+
+
+
+</style>
+</head>
+<body>
+		<div class="header" style="padding-top:100px">
+		</div>
+		<hr>
+		
+		
+		<section class="services_innertext">
+			<div class="container">
+				<div class="row" >
+					<div class="col-md-4">
+                            <div class="team_block">
+                                <div class="team_img">
+									<img src="../images/doc1pic.jpg" alt="Dr. Mahesh pic">
+								</div>
+                                <!-- <div class="team_info">
+                                    <h3>Dr.Kadiyala Venkateswararao </h3>
+                                    <p>MS (General Surgeon)</p>
+                                   
+                                </div> -->
+                            </div>
+                    </div>
+					<div class="col-md-4" style="padding:35px" >
+							<div class="docinfo_div">
+								<div class="doc_info">
+									<h1 class="section-heading d-p-info__name">Dr. A N Patnaik</h1>
+									<p class="doc__designation">Sr. Consultant, Cardiology</p>
+									<p class="doc__speciality">Cardiology</p>
+									<p class="doctor__location">Banjara Hills</p>
+								</div>
+								<div class="doc_exp">
+									<p class="d-p-info__btn-wrapper__btn"> <span>44</span> Years of Experience</p>
+                                </div>
+								<div class="doc_loc">
+									<select name="location" id="change-location-box">
+                                        <option data-url="https://www.starhospitals.in/doctors/banjara-hills/cardiology/dr-a-n-patnaik-cardiologist" value="banjara-hills" selected="">Banjara Hills
+										</option>
+                                    </select>
+								</div>
+								<div class="doc__appointment" style="padding-top:20px" >
+									<a data-name="Dr. A N Patnaik" data-speciality="" data-branch="Banjara Hills" href="https://www.starhospitals.in/book-an-appointment/banjara-hills/cardiology/dr-a-n-patnaik-cardiologist" class="d-p-info__appointment-wrapper__btn">
+										<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M7.14702 0V2H13.2446V0H15.2771V2H19.3421C19.9034 2 20.3584 2.44772 20.3584 3V19C20.3584 19.5523 19.9034 20 19.3421 20H1.04946C0.488203 20 0.0332031 19.5523 0.0332031 19V3C0.0332031 2.44772 0.488203 2 1.04946 2H5.1145V0H7.14702ZM18.3259 10H2.06572V18H18.3259V10ZM6.13076 12V14H4.09824V12H6.13076ZM11.2121 12V14H9.17954V12H11.2121ZM16.2934 12V14H14.2608V12H16.2934ZM5.1145 4H2.06572V8H18.3259V4H15.2771V6H13.2446V4H7.14702V6H5.1145V4Z" fill="#E3000F"></path>
+										</svg>
+										<span><b>Book a Physical Consultation</b></span>
+									</a>
+								</div>
+								<a data-name="Dr. A N Patnaik" data-speciality="" data-branch="Banjara Hills" href="https://www.starhospitals.in/book-an-appointment/banjara-hills/cardiology/dr-a-n-patnaik-cardiologist" class="d-p-info__appointment-wrapper__btn">
+
+								</a>
+							</div>
+					</div>
+					<div class="col-md-4">
+						<div class="d-p-info__col-3">
+							<a data-name="Dr. A N Patnaik" data-speciality="" data-branch="Banjara Hills" href="" class="d-p-info__appointment-wrapper__btn">
+							</a>
+							<ul class="d-p-info__col-3__scroll-tabs">
+								<a data-name="Dr. A N Patnaik" data-speciality="" data-branch="Banjara Hills" href="" class="d-p-info__appointment-wrapper__btn">
+								</a>
+							<li class="d-p-info__col-3__scroll-tabs__item d-p-info__col-3__scroll-tabs__item--active">
+								<a data-name="Dr. A N Patnaik" data-speciality="" data-branch="Banjara Hills" href="" class="d-p-info__appointment-wrapper__btn"></a>
+								<a href="#qualification" data-tab="qualification" class="scroll-to-view">Qualifications</a>
+							</li>
+							<li class="d-p-info__col-3__scroll-tabs__item">
+								<a href="#experience">Experience</a>
+							</li>
+							<li class="d-p-info__col-3__scroll-tabs__item">
+								<a href="#expertise" class="scroll-to-view">Field of Expertise</a>
+							</li>
+							<li class="d-p-info__col-3__scroll-tabs__item"><a href="#research">Research &amp; Publications</a></li>
+							<li class="d-p-info__col-3__scroll-tabs__item"><a href="#certifications" onclick="openCity('Tokyo')">Certifications &amp; Memberships</a>
+							</li>
+							</ul>
+						</div>
+					</div>
+				</div>	
+			</div>
+	</section>	
+		<section class="">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10">		
+						<div class="accordion">
+							<div class="at-item" id="qualification">
+								<div class="at-title active">
+									<img src="../images/qualifications_doc.png">
+									<h2>Qualifications</h2>
+								</div>
+								<div class="at-tab" style="display: block;">
+									<div class="">
+										<ul>
+											<li>Graduated from SCB Medical College, Cuttack in 1977 with a Bachelor's in Medicine (MBBS)</li>
+											<li>Post Graduated from SCB Medical College, Cuttack in 1982 with a Master's in Paediatrics Medicine (MD)</li>
+											<li>Doctoral Studies in Cardiology (DNB) accredited by the National Board of Examination, New Delhi (1999)</li>
+											<li>Doctoral studies in cardiology (DM) GB Pant hospitals, Delhi University in 1999</li>
+										</ul>
+										<div><br><br></div>
+									</div>
+								</div>
+							</div>
+							<div class="at-item" id="experience">
+								<div class="at-title">
+									<img src="../images/exp_doc.png" alt="Dr.Kadiyala Venkateswararao">
+									<h2>Experience</h2>
+								</div>
+																<div class="at-tab">
+									<div class="">
+										<ul>
+											<li>Dr.Mahesh is having 8+ years of experience as orthopedic and Neurology expert in the medical field.</li>
+											</ul>
+										<div><br><br></div>
+									</div>
+								</div>
+								<div class="at-tab">
+									Dr.Mahesh is having 8+ years of experience as orthopedic and Neurology expert in the medical field.
+								</div>
+							</div>
+							<div class="at-item" id="expertise">
+								<div class="at-title">
+									<img src="../images/certifications_doc.png" alt="Dr.Kadiyala Venkateswararao">
+									<h2>Field of Expertise</h2>
+								</div>
+								<div class="at-tab">
+									<div class="">
+										<ul>
+											<li>Expertise in interventional cardiology for adults and children.</li>
+											<li>Experienced in Percutaneous Coronary Intervention (PTCA) renal and carotid angioplasties.</li>
+											<li>Extensive training in device closures, aortic and coarctation stenting and pacemakers.</li>
+											<li>Post Graduate Teacher (DM and DNB) since 1999.</li>
+											</ul>
+										<div><br><br></div>
+									</div>
+								</div>
+								<div class="at-tab">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, reprehenderit.
+								</div>
+							</div>
+							<div class="at-item" id="research">
+								<div class="at-title">
+									<img src="../images/research_doc.png" alt="Dr.Kadiyala Venkateswararao">
+									<h2>Research & Publications</h2>
+								</div>
+								<div class="at-tab" >
+									<div class="">
+										<ul>
+											<li>Published over 50 publications in national and international journals and made contributions to various textbooks</li>
+										</ul>
+										<div><br><br></div>
+									</div>
+								</div>
+								<div class="at-tab">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, reprehenderit.
+								</div>
+							</div>
+							<div class="at-item" id="certifications">
+								<div class="at-title">
+									<img src="../images/certifications_doc.png" alt="Dr.Kadiyala Venkateswararao">
+									<h2>Certifications & Memberships</h2>
+								</div>
+								<div class="at-tab" >
+									<div class="">
+										<ul>
+											<li>Member of the board of studies and program chair for the fellowship in non-invasive cardiology, Texila American University, South America </li>
+											<li>FSCAI (USA) 2012, FACC (USA) 2017</li>
+											</ul>
+										<div><br><br></div>
+									</div>
+								</div>
+								<div class="at-tab" >
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, reprehenderit.
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>		
+
+<script> 
+$(document).ready(function () {
+  $(".at-title").click(function () {
+    $(this).toggleClass("active").next(".at-tab").slideToggle().parent().siblings().find(".at-tab").slideUp().prev().removeClass("active");
+  });
+});
+
+</script>
+
+
+
+			
+</body>
+			</html>

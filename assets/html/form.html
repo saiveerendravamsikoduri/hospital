@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/headerfooter.css">
+    <style>
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            margin-top: 50px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .breadcrumb-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 130px 0;
+  overflow: hidden;
+}
+
+.br-2 {
+ background-image: url(../images/careerbreadcrumpsimg.jpg);
+}
+.bg-f {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #ddd;
+}
+.breadcrumb-wrap:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 70, 123, 0.9);
+}
+
+.breadcrumb-title {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.breadcrumb-title h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 15px;
+}
+
+.breadcrumb-title .breadcrumb-menu {
+  text-align: center;
+}
+.list-style {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.breadcrumb-title .breadcrumb-menu li:first-child {
+  margin-left: 0;
+}
+
+.breadcrumb-title .breadcrumb-menu li {
+  display: inline-block;
+  margin: 0 10px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+.list-style li {
+    list-style: none;
+}
+
+.breadcrumb-title .breadcrumb-menu li:first-child a {
+  padding-left: 0;
+}
+
+.breadcrumb-title .breadcrumb-menu li a {
+  font-size: 16px;
+  line-height: 22px;
+  display: inline-block;
+  padding: 0px 5px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  position: relative;
+  color: #fff;
+}
+
+.breadcrumb-title .breadcrumb-menu li:after {
+  position: absolute;
+  top: 1px;
+  right: -13px;
+  content: "/";
+  font-size: 16px;
+  background-color: transparent;
+  color: #fff;
+}
+
+.breadcrumb-title .breadcrumb-menu li:last-child {
+  margin-right: 0;
+  color: #2490EB;
+}
+
+.breadcrumb-title .breadcrumb-menu li:last-child:after {
+  display: none;
+}
+
+.breadcrumb-title .breadcrumb-menu li a:hover {
+  color: #2490EB;
+}
+
+.breadcrumb-title .breadcrumb-menu li:last-child a:after {
+  display: none;
+}
+
+ .breadcrumb-img img {
+  display: block;
+  margin-left: auto;
+} 
+
+	@media only screen and (min-width: 1200px) and (max-width: 1399px){
+.breadcrumb-title h2, .section-title h2, .content-title h2 {
+    font-size: 40px;
+}
+    }
+        
+    </style>
+</head>
+<body>
+            <!-- header start -->
+    <header class="fixed-top" style="z-index: 3;">
+        <div style="background-color: #196087;" class="locandnum">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#196087" class=" p-2 bi bi-headset bg-white rounded-circle" viewBox="0 0 16 16">
+                        <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/>
+                    </svg>
+                    <p>Your Trusted Service Provider</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#196087" class="p-2 ml-3 bi bi-telephone-fill bg-white rounded-circle" viewBox="0 0 15 16">
+                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                    </svg>
+                    <p>+91 70133 25464</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#196087" class="p-2 ml-3 bg-white bi bi-geo-alt-fill rounded-circle" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                    </svg>
+                    <p>Mandapeta, Tarvanipeta 533308</p>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-md bg-white navbar-dark shadow ">
+            <a class="navbar-brand" href="#"><img src="/assets/images/mainLogo.jpg" alt="logo" width="200px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span ><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list bg-primary" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav ">
+                <li class="nav-item">
+                  <a class="nav-link"  style="color: #196087;" href="../../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  style="color: #196087;" href="./aboutus.html">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle ml-lg-3" data-toggle="dropdown"  style="color: #196087;">
+                        Department
+                    </a>
+                    <div class="dropdown-menu" >
+                        <a  class="dropdown-item" href="./ortho.html"  style="color: #196087;">Orthopedic</a>
+                        <a  class="dropdown-item" href="./neuro.html"  style="color: #196087;">neuro</a>
+                        <a  class="dropdown-item" href="./physio.html"  style="color: #196087;">Physiotheraphy</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown"  >
+                  <a href="#" class="nav-link dropdown-toggle ml-lg-3" data-toggle="dropdown"  style="color: #196087;">
+                      Our Doctors
+                  </a>
+                  <div class="dropdown-menu" >
+                      <a  class="dropdown-item" href="./doctor1.html"  style="color: #196087;">Dr. Mahesh Yaddanapudi</a>
+                      <a  class="dropdown-item" href="./doctor2.html"  style="color: #196087;">Dr. B. Sai Tejaswi </a>
+                  </div>
+              </li>
+                <li class="nav-item">
+                    <a class="nav-link"  style="color: #196087;" href="./contactus.html">Contact Us</a>
+                </li>
+               
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle ml-lg-3" data-toggle="dropdown"  style="color: #196087;">
+                        others
+                    </a>
+                    <div class="dropdown-menu" >
+                        <a  class="dropdown-item" href="./careers.html"  style="color: #196087;">Careers</a>
+                        <a  class="dropdown-item" href="./testimonial.html"  style="color: #196087;">Testimals</a>
+                    </div>
+                </li> 
+                <li class="nav-item">
+                  <button class="btn btn-primary but"><a href="./form.html">Book An Appointment</a></button>
+                </li>      
+              </ul>
+            </div>  
+          </nav>
+    </header>
+    <!-- header end -->
+
+    
+<!-- breadcrums start -->
+<div class="breadcrumb-wrap bg-f br-2" style="margin-top: 100px;">
+    <div class="container">
+        <div class="breadcrumb-title">
+            <h2>Appointment From </h2>
+            <ul class="breadcrumb-menu list-style">
+                <li><a href="/index.html">Home</a></li>
+                <li>Appointment form</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- breadcrums end -->
+
+<body style="background-color: #196087;">
+    <div class="container" >
+        <div class="form-container bg-white shadow mb-5">
+            <h2 class="text-center mb-4">Patient Registration Form</h2>
+            <form class="bg-white">
+                <div class="form-group bg-white  ">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" class="form-control" id="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select class="form-control" id="gender" required>
+                        <option value="">Select your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea class="form-control" id="address" rows="3" placeholder="Enter your address" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+    
+     <!-- footer -->
+     <footer class="main-footer">
+        <div class="footer-upper">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-widget logo-widget">
+                            <div class="logo">
+                                <img src="/assets/images/mainLogo.jpg" alt="Kadiyala Hospitals">
+                            </div>
+                            <ul class="social-icon-two">
+                                <li><a href=" target="_blank">
+                                <span class="bi bi-facebook"></span>
+                                </a></li>
+                                <li><a href="https://twitter.com/kadiyalahospitl" target="_blank"><span class="bi bi-instagram"></span></a></li>
+                                <li><a href="https://www.youtube.com/channel/UC_HeTKtlnElybftdTblM4Ww" target="_blank"><span class="bi bi-youtube"></span></a></li>
+                                <li><a href="https://www.instagram.com/kadiyalahospitals/" target="_blank"><span class="bi bi-twitter-x"></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-column col-6 col-lg-2 col-md-6 col-sm-12">
+                        <div class="footer-widget links-widget">
+                            <h4 class="widget-title">Quick Links</h4>
+                            <div class="widget-content">
+                                <ul class="list">
+                                    <li><a href="/index.html">Home</a></li>
+                                    <li><a href="./assets/html/aboutus.html">About</a></li>
+                                    <li><a href="images.html">Images</a></li>
+                                    <li><a href="./assets/html/contactus.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-column col-6 col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-widget links-widget">
+                            <h4 class="widget-title">Useful Links</h4>
+                            <div class="widget-content">
+                                <ul class="list">
+                                  
+                                    <li><a href="./assets/html/neuro.html">Neurology </a></li>
+                                    <li><a href="./assets/html/physio.html">Physiotherapy </a></li>
+                                    <li><a href="./assets/html/ortho.html  ">Orthopaedics </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-column col-lg-4 col-md-6 col-sm-12">
+                        <div class="footer-widget contact-widget">
+                            <h4 class="widget-title">Contact Us</h4>
+                            <div class="widget-content">
+                                <ul class="contact-info">
+                                    <li><span class="icon bi bi-geo-alt"></span>Mandapeta, Tarvanipeta, East Godawari Andhra Pradesh 522601</li>
+                                    <li><span class="icon bi bi-phone"></span><a href="tel:7013325464">+91 7013325464</a></li>
+                                    <li><span class="icon bi bi-mailbox"></span><a href="mailto:saitejeswihospital@gmail.com">srisaitejeswihospital@gmail.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+          <label for="">Developer's Team</label>
+          <select name="" id="">
+            <option value="">K Vamsi</option>
+            <option value="">Anusha</option>
+            <option value=""> Pujitha</option>
+            <option value="">Anuhya</option>
+          </select>
+            <div class="auto-container clearfix">
+                <div class="copyright">© 2021 Sri Sai Tejeswi Hospitals All Rights Reserved</div>
+            </div>
+        </div>
+    </footer>
+      
+</body>
+
+</html>

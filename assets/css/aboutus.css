@@ -1,0 +1,128 @@
+/* --------------------------------------------------------ABOUT US PAGE STARTS ----------------------------------------------------------------*/
+
+/* -------------------------------------------------------- ABOUT HOSPITAL CSS STARTS --------------------------------------------------------*/
+
+.about_hospital_section {
+    position: relative;
+    min-height: 60vh;
+    padding: 50px 0px 130px;
+}
+.about_hospital_section .auto-container {
+    position: relative;
+    max-width: 1155px;
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+.inner_abtrow p {
+    line-height: 30px;
+    margin-bottom: 18px;
+}
+.hospital_image {
+    padding: 30px;
+    position: relative;
+    margin-top: 0;
+    z-index: 1;
+}
+.hospital_image img {
+    position: relative;
+    padding: 6px;
+    border-radius: 28px;
+    box-shadow: 0px 0px 10px #888;
+    background: #fff;
+}
+
+.hospital_image img {
+    display: inline-block;
+    max-width: 100%;
+    height: 50vh;
+}
+.hospital_image::before, .hospital_image::after {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background: #ffe4e9;
+    left: 0;
+    top: 24px;
+    right: 0;
+    transform: rotate(8deg);
+    margin: auto;
+    box-shadow: 0px 0px 10px #b9b9b9;
+    border-radius: 13px;
+    transition: all ease-in-out .6s;
+}
+.hospital_image::after {
+    background: #eeecff;
+    z-index: -1;
+    transform: rotate(-8deg);
+}
+.hospital_image:hover::after {
+    transform: rotate(8deg);
+}
+.hospital_image:hover:before {
+    transform: rotate(-8deg);
+}
+/* -------------------------------------------------------- ABOUT HOSPITAL CSS ENDS --------------------------------------------------------*/
+
+/* -------------------------------------------------------- MISSIONVISIONVALUES CSS STARTS --------------------------------------------------------*/
+
+.MissionVisionValues{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.mvv_sec {
+    text-align: center;
+    margin-top: 40px;
+}
+.mvv_blocks p {
+    color: #333;
+    margin: 0px;
+}
+
+.mvv_sec .col-md-4 {
+    border-right: 2px dashed #333;
+    padding: 22px 17px;
+}
+
+/* .page-wrapper::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../Img/bg.jpg);
+    opacity: .2;
+}
+.page-wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    min-width: 300px;
+    z-index: 9;
+    overflow: hidden;
+} */
+/*-----------------------------------------------------MISSIONVISIONVALUES CSS ENDS-----------------------------------------------------*/
+
+/* --------------------------------------------------------PROMOTERS CSS STARTS ------------------------------------------------------ */
+.promoters_section h3, .promoters_section h5 {
+	color:#27477d;
+	font-weight: 700;
+    letter-spacing: -0.25px;
+}
+.promoters_section {
+	padding-top:50px;
+	padding-bottom: 50px;
+    background: #f7f7f7;
+	
+}
+.promoters_section .txt-block{
+	    padding-right: 30px;
+    padding-left: 30px;
+}
+.promoters_section txt-block h3  {
+    margin-bottom: 30px;
+    font-size: 2.625rem;
+}
+
+/* -----------------------------------------------------  PROMOTERS CSS ENDS ------------------------------------------------------- */
+
+/* --------------------------------------------------------ABOUT US PAGE CSS ENDS ----------------------------------------------------------------*/
