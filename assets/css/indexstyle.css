@@ -108,7 +108,10 @@
   button a{
     color: white;
   }
-
+  .navbar-nav {
+    /* Set a minimum width for the navbar items */
+    min-width: 800px; /* Adjust this value as needed */
+}
   @media (max-width:480px)
   {
     .butt{
