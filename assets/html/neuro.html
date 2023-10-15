@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        .hos_dept{
+                padding: 50px;
+                text-align: center;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: red;
+                border-radius: 15%;
+        }
+        .hos_dept:hover{
+            background-color: #196087;
+            flex-direction: column-reverse;
+         }
+         @media (max-width:480px)
+         {
+            .hos_dept{
+                margin-bottom: 50px;
+            }
+         }
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center; color: #196087; "><b>Our Deparments</b></h1>
+        <div class="row">
+            <div class="col-sm-3  hos_dept ml-sm-5">
+                <h1>Orthopedic</h1>
+                <img src="../images/orthopedics-dept.png" alt="" class="w-100">
+            </div>
+            <div class="col-sm-3 hos_dept ml-sm-5">
+                <h1>Physiotheraphy</h1>
+                <img src="../images/physical-therapy_dept.png" alt="" class="w-100">
+            </div>
+            <div class="col-sm-3  hos_dept ml-sm-5 ">
+                <h1>Neuro</h1>
+                <img src="../images/neuro_dept.png" alt="" class="w-100">
+            </div>
+        </div>
+    </div>
+
+    <!-- our departments -->
+    <div class="container dept shadow mt-sm-5 mb-sm-5">
+        <h1 style="text-align: center;"> Our Departmets</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card shadow">
+                    <div class="card-body card-body_dept">
+                        <img src="/assets/images/orthodept.jpg"  class="img-design " alt="ortho">
+                    </div>
+                    <div class="card-footer" style="text-align: center;"><h6><b>ORTHOPEDIC</b></h6></div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card shadow">
+                    <div class="card-body card-body_dept">
+                        <img src="/assets/images/physiocard.jpg"  class="img-design" alt="ortho">
+                    </div>
+                    <div class="card-footer"  style="text-align: center;"><h6><b>PHYSIOTHERAPHY</b></h6></div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card shadow">
+                    <div class="card-body card-body_dept">
+                        <img src="/assets/images/neurocard.jpg"  class="img-design" alt="ortho">
+                    </div>
+                    <div class="card-footer"  style="text-align: center;"><h6><b>NEURO</b></h6></div>
+                </div>
+            </div>
+        </div>
+   </div>
+
+    
+</body>
+</html>

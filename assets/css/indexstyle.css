@@ -63,10 +63,7 @@
 .placewhere{
     padding-bottom: 20px;
 }
-/* Departments */
-.card-body_dept{
-    height: 40vh;
-}
+
 /* header */
 .locandnum p{
     color:white;
@@ -108,12 +105,19 @@
   button a{
     color: white;
   }
+  a:hover{
+    text-decoration: none;
+    color: white;
+  }
   .navbar-nav {
     /* Set a minimum width for the navbar items */
     min-width: 800px; /* Adjust this value as needed */
 }
   @media (max-width:480px)
   {
+    .c2{
+        display: none;
+    }
     .butt{
         display: none;
     }
@@ -162,6 +166,9 @@
   
   @media (min-width:1080px)
   {
+    .dept{
+        padding-left: 60px;
+    }
     .butt{
         display: none;
     }
@@ -462,10 +469,34 @@
     text-align: center;
     margin-bottom: 29px;
 }
+.smallsc{
+    display: none;
+}
 }
 
 @media only screen and (max-width: 764px){
 .main-footer .footer-upper .footer-column:before {
 	display:none;
+}
+}
+/* departments */
+.hos_dept{
+    padding: 50px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: red;
+    border-radius: 15%;
+}
+.hos_dept:hover{
+background-color: #196087;
+flex-direction: column-reverse;
+}
+@media (max-width:480px)
+{
+.hos_dept{
+    margin-bottom: 50px;
 }
 }

@@ -1,0 +1,626 @@
+<html>
+<head>
+<title>hospital-doctors</title>
+<meta charset="UTF-8" />
+		<title>title</title>
+		<title>Bootstrap Example</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="../css/headerfooter.css">
+
+<link rel="text/css" href="../css/doctors.css">
+<style>
+	.doc-info__col-1 img {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 10px;
+}
+
+/* SECOND COLUMN */
+.doc-info__col-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 36.5%;
+}
+
+
+
+.doc__designation {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 0.25em;
+}
+.doc__speciality {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 0.5em;
+}		
+.doc__location {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+/* Years of Experience */
+.doc-exp__btn-wrapper {
+    display: flex;
+    gap: 2em;
+}
+.doc-exp_btn-wrapper_btn {
+    display: block;
+    min-height: 50px;
+    min-width: 133px;
+    width: max-content;
+    border-radius: 10px;
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    border: 1px solid #004e9e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    color: #424242;
+    font-size: 12px;
+    gap: 0.5em;
+}
+.doc-exp_btn-wrapper_btn span {
+    font-family: Plus Jakarta Sans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #004e9e;
+}
+/*------------------------------------ Years of Experience ends--------------------------- */
+
+.doc__selectbox select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    background: transparent;
+    background-image: url(data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.0007 13.1714L16.9505 8.22168L18.3647 9.63589L12.0007 15.9999L5.63672 9.63589L7.05094 8.22168L12.0007 13.1714Z' fill='black'/%3E%3C/svg%3E%0A)!important;
+    background-repeat: no-repeat!important;
+    background-size: 25px;
+    background-position: calc(100% - 1em)!important;
+    padding-right: 2em!important;
+}
+.doc_selectbox input, .doc_selectbox select {
+    min-height: 50px;
+    border: 1.7px solid #e0e0e0;
+    background-color: #fafafa;
+    border-radius: 10px;
+    width: 50%;
+    padding: 0 1em;
+    outline: none;
+}
+.doc__selectbox{
+    margin-bottom: 16px;
+}
+input, select {
+    font-weight: 500;
+    font-size: 12px;
+}
+/* Book a Physical Consultation */
+.doc__appointment-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.doc_appointment-wrapper_btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    cursor: pointer;
+}
+.doc_appointment-wrapper_btn span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #020202;
+}		
+/* Book a Physical Consultation	 Ends	 */
+		
+		
+/* THIRD COLUMN	 */
+.doc-info__col-3 {
+   flex: 0 0 23%;
+    border: 1px solid black;
+    background: #ffffff;
+    border: 1px solid #bdbdbd;
+    border-radius: 20px;
+    padding: 1px;
+}
+
+/* UNORDERED LIST */
+.doc-info_col-3_scroll-tabs {
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 95%;
+}
+
+.doc-info_col-3scroll-tabs_item--active {
+    border-bottom: 0.7px solid #004e9e;
+}
+.doc-info_col-3scroll-tabs_item {
+    list-style-type: none;
+    padding-bottom: 1em;
+    border-bottom: 0.7px solid #e0e0e0;
+}
+
+.doc-info_col-3scroll-tabs_item--active a {
+    color: #004e9e;
+    font-weight: 600;
+}
+.doc-info_col-3scroll-tabs_item a {
+    font-family: Plus Jakarta Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #757575;
+}
+.doc-info_col-3scroll-tabs_item a:hover{
+	    text-decoration: none;
+}
+@media screen and (min-width: 1366px) and (max-width: 1439px){
+.d-p-info_col-3scroll-tabs_item {
+    padding: 1.25em 0 1em;
+}
+.d-p-info_col-3scroll-tabs_item a {
+    font-size: 14px!important;
+}
+}
+
+
+
+.doc-info {
+    width: 85%;
+    width: 88.5%;
+    margin: 0 auto 0 7.5%;
+    min-height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    gap: 3.5em;
+   padding-top: 50px;
+    padding-bottom: 50px;
+}
+@media screen and (max-width: 391px){
+.doc-info {
+    flex-direction: column;
+    width: 85%;
+    margin: 0 auto;
+    gap: 3em;
+}
+}
+	.doc-details_sec{
+	padding-bottom: 50px;
+	
+}
+.doc_accordion .card {
+    margin-bottom: .75rem;
+    box-shadow: 0px 1px 15px 1px rgba(230, 234, 236, 0.35);
+    border-radius: .25rem;
+    border: none;
+	 background: transparent;
+}
+
+.doc_accordion .card .card-header {
+    background-color: transparent;
+    border: none;
+    padding: 2rem;
+	border-bottom: 0.7px solid #004e9e;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.doc_accordion .card .card-header * {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.mb-0, .my-0 {
+    margin-bottom: 0 !important;
+}
+
+.doc_accordion .card .card-header a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    font-size: inherit;
+    position: relative;
+    -webkit-transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -ms-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
+    transition: color 0.5s ease;
+    padding-right: 1.5rem;
+	font-size: 24px;
+    font-weight: 600;
+}
+
+.doc_accordion .card .card-header a[aria-expanded="false"]:before {
+    content: "+";
+}
+
+.doc_accordion .card .card-header a[aria-expanded="true"]:before {
+    content: "-";
+}
+
+.doc_accordion .card .card-header a:before {
+    position: absolute; 
+    right: 7px;
+    top: 0;
+    font-size: 18px;
+    display: block;
+    font-family: FontAwesome;
+     display: inline-block;
+     padding-right: 3px;
+     vertical-align: middle;
+     font-size: 26px;
+     color: #000;
+}
+.doc-achievement__details {
+    padding: 0 5.5em;
+    font-family: Plus Jakarta Sans;
+    margin-top: 1em;
+    max-height: 0em;
+    transition: all .5s;
+      max-height: 80rem;
+    padding-bottom: 1rem;
+}
+.doc-achievement__details ul li {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #212121;
+    padding: 0.5em 0;
+}
+</style>
+</head>
+<body>
+
+	         <!-- header start -->
+			 <header class="fixed-top" style="z-index: 3;">
+				<div style="background-color: #196087;" class="locandnum">
+					<div class="container-fluid">
+						<div class="d-flex align-items-center">
+							<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#196087" class=" p-2 bi bi-headset bg-white rounded-circle" viewBox="0 0 16 16">
+								<path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/>
+							</svg>
+							<p>Your Trusted Service Provider</p>
+							<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#196087" class="p-2 ml-3 bi bi-telephone-fill bg-white rounded-circle" viewBox="0 0 15 16">
+								<path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+							</svg>
+							<p>+91 70133 25464</p>
+							<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#196087" class="p-2 ml-3 bg-white bi bi-geo-alt-fill rounded-circle" viewBox="0 0 16 16">
+								<path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+							</svg>
+							<p>Mandapeta, Tarvanipeta 533308</p>
+						</div>
+					</div>
+				</div>
+				<nav class="navbar navbar-expand-md bg-white navbar-dark shadow ">
+					<a class="navbar-brand" href="#"><img src="/assets/images/mainLogo.jpg" alt="logo" width="200px"></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+						<span ><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list bg-primary" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+						  </svg></span>
+					</button>
+					<div class="collapse navbar-collapse" id="collapsibleNavbar">
+					  <ul class="navbar-nav ">
+						<li class="nav-item">
+						  <a class="nav-link"  style="color: #196087;" href="../../index.html">Home</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link"  style="color: #196087;" href="./aboutus.html">About Us</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a href="#" class="nav-link dropdown-toggle ml-lg-3" data-toggle="dropdown"  style="color: #196087;">
+								Department
+							</a>
+							<div class="dropdown-menu" >
+								<a  class="dropdown-item" href="./ortho.html"  style="color: #196087;">Orthopedic</a>
+								<a  class="dropdown-item" href="./neuro.html"  style="color: #196087;">neuro</a>
+								<a  class="dropdown-item" href="./physio.html"  style="color: #196087;">Physiotheraphy</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown"  >
+						  <a href="#" class="nav-link dropdown-toggle ml-lg-3" data-toggle="dropdown"  style="color: #196087;">
+							  Our Doctors
+						  </a>
+						  <div class="dropdown-menu" >
+							  <a  class="dropdown-item" href="./doctor1.html"  style="color: #196087;">Dr. Mahesh Yaddanapudi</a>
+							  <a  class="dropdown-item" href="./doctor2.html"  style="color: #196087;">Dr. B. Sai Tejaswi </a>
+						  </div>
+					  </li>
+						<li class="nav-item">
+							<a class="nav-link"  style="color: #196087;" href="./contactus.html">Contact Us</a>
+						</li>
+					   
+						<li class="nav-item dropdown">
+							<a href="#" class="nav-link dropdown-toggle ml-lg-3" data-toggle="dropdown"  style="color: #196087;">
+								others
+							</a>
+							<div class="dropdown-menu" >
+								<a  class="dropdown-item" href="./careers.html"  style="color: #196087;">Careers</a>
+								<a  class="dropdown-item" href="./testimonial.html"  style="color: #196087;">Testimals</a>
+							</div>
+						</li> 
+						<li class="nav-item">
+						  <button class="btn btn-primary but"><a href="./form.html">Book An Appointment</a></button>
+						</li>      
+					  </ul>
+					</div>  
+				  </nav>
+			</header>
+			<!-- header end -->
+	<!-- -----------------------------------------Breadcrumbs Starts--------------------------------------------------------- -->		
+	<div class="breadcrumb-wrap bg-f br-2">
+		<div class="container">
+			<div class="breadcrumb-title">
+				<h2>About Us</h2>
+				<ul class="breadcrumb-menu list-style">
+					<li><a href="index.html">Home</a></li>
+					<li>Our Doctors</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!-- -----------------------------------------Breadcrumbs ends--------------------------------------------------------- -->	
+
+<!-- -----------------------------------------Doctor Infromation starts--------------------------------------------------------- -->	
+<div class="doc-info">
+<div class="doc-info__col-1">
+	<img data-src="https://starhospitalsproduction.s3.amazonaws.com/PvqYJsW8Zjohj26HcaFS3UoF8MplDAFoptExNEMg.webp" alt="" src="https://starhospitalsproduction.s3.amazonaws.com/PvqYJsW8Zjohj26HcaFS3UoF8MplDAFoptExNEMg.webp">
+</div>
+
+<div class="doc-info__col-2">
+	<div>
+		<h1 class="section-heading doc__name"> Dr. Mahesh yaddanapudi  </h1>
+		<p class="doc__designation">Consultant, Cardiology</p>
+		<p class="doc__speciality"> Cardiology   </p>
+		<p class="doc__location"> Banjara Hills <span style="padding:0px 0.25em">|</span> Financial District </p>
+	</div>
+	<div class="doc-exp__btn-wrapper">
+		 <p class="doc-exp_btn-wrapper_btn"> <span>30</span> Years of Experience</p>
+	</div>
+	<div class="doc__selectbox">
+		<select name="location" id="change-location-box">
+			<option data-url="" value="">Banjara Hills</option>
+			
+		</select>
+	</div>
+	<div class="doc__appointment-wrapper">
+		<a data-name="Dr. Ramesh Gudapati" data-speciality="" data-branch="Financial District" href="" class="doc_appointment-wrapper_btn">
+			<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M7.14702 0V2H13.2446V0H15.2771V2H19.3421C19.9034 2 20.3584 2.44772 20.3584 3V19C20.3584 19.5523 19.9034 20 19.3421 20H1.04946C0.488203 20 0.0332031 19.5523 0.0332031 19V3C0.0332031 2.44772 0.488203 2 1.04946 2H5.1145V0H7.14702ZM18.3259 10H2.06572V18H18.3259V10ZM6.13076 12V14H4.09824V12H6.13076ZM11.2121 12V14H9.17954V12H11.2121ZM16.2934 12V14H14.2608V12H16.2934ZM5.1145 4H2.06572V8H18.3259V4H15.2771V6H13.2446V4H7.14702V6H5.1145V4Z" fill="#E3000F"></path>
+			</svg>
+			<span>Book a Physical Consultation</span>
+		</a>
+	</div>
+</div>
+
+<div class="doc-info__col-3">
+	<ul class="doc-info_col-3_scroll-tabs">
+		<li class="doc-info_col-3scroll-tabsitem doc-infocol-3scroll-tabs_item--active">
+			<a class="collapsed" data-toggle="collapse" href="#qualification" aria-expanded="false" 
+				aria-controls="qualification" data-abc="true" >Qualifications
+			</a>
+		</li>
+		<li class="doc-info_col-3scroll-tabs_item">
+			<a  class="collapsed" data-toggle="collapse" href="#experience" aria-expanded="false" 
+				aria-controls="experience" data-abc="true">Experience
+			</a>
+		</li>
+		<li class="doc-info_col-3scroll-tabs_item">
+			<a  class="collapsed" data-toggle="collapse" href="#expertise" aria-expanded="false" 
+				aria-controls="expertise" data-abc="true">Field of Expertise
+			</a>
+		</li>
+		<li class="doc-info_col-3scroll-tabs_item">
+			<a  data-toggle="collapse" href="#research" aria-expanded="false" 
+				aria-controls="research" data-abc="true" class="collapsed">Research &amp; Publications
+			</a>
+		</li>
+		<li class="doc-info_col-3scroll-tabs_item">
+			<a  data-toggle="collapse" href="#certifications" aria-expanded="false" 
+				aria-controls="certifications" data-abc="true" class="collapsed">Certifications &amp; Memberships
+			</a>
+		</li>
+	</ul>
+</div>
+</div>
+<!-- -----------------------------------------Doctor Infromation ends--------------------------------------------------------- -->
+
+<!-- -----------------------------------------Accodion Starts--------------------------------------------------------- -->
+<div class="doc-details_sec" id="doctor_details">
+	<div class="row container d-flex justify-content-center">
+		<div class="col-lg-10">
+			<div class="doc_accordion mt-4" id="accordion" role="tablist">
+				<div class="card">
+					<div class="card-header" role="tab" id="heading-1">
+						<h6 class="mb-0">
+			  
+							<a data-toggle="collapse" href="#qualification" aria-expanded="false" aria-controls="qualification" data-abc="true" class="collapsed">
+								Qualifications
+							</a>
+						</h6>
+					</div>
+					<div id="qualification" class="collapse" role="tabpanel" aria-labelledby="heading-1" data-parent="#accordion" style="">
+						<div class="card-body">
+							<div class="doc-achievement__details">
+								<ul><li>MBBS, Andhra Medical College</li><li>MD- Cardiology – Andhra Medical College</li>
+									<li>DM- Cardiology – NIMS&nbsp;</li>
+								</ul>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header" role="tab" id="heading-2">
+						<h6 class="mb-0">
+							<a class="collapsed" data-toggle="collapse" href="#experience" aria-expanded="false" aria-controls="experience" data-abc="true">
+							Experience
+							</a>
+						</h6>
+					</div>
+					<div id="experience" class="collapse" role="tabpanel" aria-labelledby="heading-2" data-parent="#accordion">
+						<div class="card-body">
+							<p>For what reason would it be advisable for me to think about business content? That might be little bit risky to have crew member like them.</p>
+							<ol class="pl-3 mt-4">
+							  <li>connection and try again</li>
+							  <li>correct while signing in</li>
+							  <li>your account is accessible in your region</li>
+							</ol>
+							<br>
+							<p class="text-success">
+							  <i class="mdi mdi-alert-octagon mr-2"></i>you can contact our support.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header" role="tab" id="heading-3">
+						<h6 class="mb-0">
+							<a class="collapsed" data-toggle="collapse" href="#expertise" aria-expanded="false" aria-controls="expertise" data-abc="true">
+							Field of Expertise
+							</a>
+						</h6>
+					</div>
+					<div id="expertise" class="collapse" role="tabpanel" aria-labelledby="heading-3" data-parent="#accordion">
+						<div class="card-body">
+							<p class="mb-0">For what reason would it be advisable for me to think about business content? That might be little bit risky to have crew member like them.</p>
+						</div>
+					</div>
+				</div>
+			  
+				<div class="card">
+					<div class="card-header" role="tab" id="heading-4">
+						<h6 class="mb-0">
+							<a class="collapsed" data-toggle="collapse" href="#research" aria-expanded="false" aria-controls="research" data-abc="true">
+							Research & Publications
+							</a>
+						</h6>
+					</div>
+					<div id="research" class="collapse" role="tabpanel" aria-labelledby="heading-4" data-parent="#accordion">
+						<div class="card-body">
+							<p class="mb-0">For what reason would it be advisable for me to think about business content? That might be little bit risky to have crew member like them.</p>
+						</div>
+					</div>
+				</div>
+		  
+				<div class="card">
+					<div class="card-header" role="tab" id="heading-5">
+						<h6 class="mb-0">
+							<a class="collapsed" data-toggle="collapse" href="#certifications" aria-expanded="false" aria-controls="certifications" data-abc="true">
+								Certifications & Memberships
+							</a>
+						</h6>
+					</div>
+					<div id="certifications" class="collapse" role="tabpanel" aria-labelledby="heading-5" data-parent="#accordion">
+						<div class="card-body">
+							<p class="mb-0">For what reason would it be advisable for me to think about business content? That might be little bit risky to have crew member like them.</p>
+						</div>
+					</div>
+				</div>
+			</div> 
+		</div>
+	</div>        
+</div>
+
+<!-- -----------------------------------------Accodion ends--------------------------------------------------------- -->
+
+<!-- -----------------------------------------Footer Starts--------------------------------------------------------- -->
+     <!-- footer -->
+     <footer class="main-footer">
+        <div class="footer-upper">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-widget logo-widget">
+                            <div class="logo">
+                                <img src="/assets/images/mainLogo.jpg" alt="Kadiyala Hospitals">
+                            </div>
+                            <ul class="social-icon-two">
+                                <li><a href=" target="_blank">
+                                <span class="bi bi-facebook"></span>
+                                </a></li>
+                                <li><a href="https://twitter.com/kadiyalahospitl" target="_blank"><span class="bi bi-instagram"></span></a></li>
+                                <li><a href="https://www.youtube.com/channel/UC_HeTKtlnElybftdTblM4Ww" target="_blank"><span class="bi bi-youtube"></span></a></li>
+                                <li><a href="https://www.instagram.com/kadiyalahospitals/" target="_blank"><span class="bi bi-twitter-x"></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-column col-6 col-lg-2 col-md-6 col-sm-12">
+                        <div class="footer-widget links-widget">
+                            <h4 class="widget-title">Quick Links</h4>
+                            <div class="widget-content">
+                                <ul class="list">
+                                    <li><a href="../../index.html">Home</a></li>
+                                    <li><a href="../html/aboutus.html">About</a></li>
+                                    <li><a href="images.html">Images</a></li>
+                                    <li><a href="../html/contactus.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-column col-6 col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-widget links-widget">
+                            <h4 class="widget-title">Useful Links</h4>
+                            <div class="widget-content">
+                                <ul class="list">
+                                  
+                                    <li><a href="./assets/html/neuro.html">Neurology </a></li>
+                                    <li><a href="./assets/html/physio.html">Physiotherapy </a></li>
+                                    <li><a href="./assets/html/ortho.html  ">Orthopaedics </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-column col-lg-4 col-md-6 col-sm-12">
+                        <div class="footer-widget contact-widget">
+                            <h4 class="widget-title">Contact Us</h4>
+                            <div class="widget-content">
+                                <ul class="contact-info">
+                                    <li><span class="icon bi bi-geo-alt"></span>Mandapeta, Tarvanipeta, East Godawari Andhra Pradesh 522601</li>
+                                    <li><span class="icon bi bi-phone"></span><a href="tel:7013325464">+91 7013325464</a></li>
+                                    <li><span class="icon bi bi-mailbox"></span><a href="mailto:saitejeswihospital@gmail.com">srisaitejeswihospital@gmail.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+          <label for="">Developer's Team</label>
+          <select name="" id="">
+            <option value="">K Vamsi</option>
+            <option value="">Anusha</option>
+            <option value=""> Pujitha</option>
+            <option value="">Anuhya</option>
+          </select>
+            <div class="auto-container clearfix">
+                <div class="copyright">© 2021 Sri Sai Tejeswi Hospitals All Rights Reserved</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

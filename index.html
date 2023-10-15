@@ -10,7 +10,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/assets/css/indexstyle.css">
-    <style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <style>
+            .home-demo .item {
+        background: #ff3f4d;
+    }
+    .home-demo h2 {
+        color: #FFF;
+        text-align: center;
+        padding: 5rem 0;
+        margin: 0;
+        font-style: italic;
+        font-weight: 300;
+    }
+    .owl-carousel img{
+        object-fit: fill;
+        height: 50vh;
+    }
+ 
 
 
     </style>
@@ -96,8 +117,12 @@
       <div style="position: absolute; top:45; right: 0;" class="butt"><button class="btn btn-primary"><a href="./assets/html/form.html">Book An Appointment</a></button></div>
         <!-- The first carousel -->
          <div class="carousel-inner" >
-           <div class="carousel-item active">
-             <div class="d-flex">
+          
+           <div class="carousel-item active ">
+            <div class=" smallsc ">
+              <img src="/assets/images/carosel_image5.jpg" class="img-design caroselimage"  alt="">
+            </div>
+             <div class="d-flex c2">
                <div  class="outer-in-carosel-content" >
                  <div style="height: 65vh;  width: 70%;">
                    <p style="color: #196087;">
@@ -128,7 +153,10 @@
            </div>
            
            <!-- second carosel -->
-           <div class="carousel-item ">
+           <div class="carousel-item c2">
+            <div class=" smallsc">
+              <img src="/assets/images/carosel_image6.jpg" class="img-design caroselimage"  alt="">
+            </div>
              <div class="d-flex">
                <div  class="outer-in-carosel-content" >
                  <div class=".inner-in-carosel-content">
@@ -164,7 +192,11 @@
            
            <!-- Third carosel -->
            <div class="carousel-item ">
-             <div class="d-flex">
+            <div class=" smallsc">
+              <img src="/assets/images/carosel_image7.jpg" class="img-design caroselimage" alt="">
+            </div>
+          
+             <div class="d-flex c2">
                <div  class="outer-in-carosel-content" >
                  <div style="height: 65vh;  width: 70%;">
                    <p style="color: #196087;">
@@ -202,22 +234,7 @@
              <img src="/assets/images/carosel_image4.jpg" class="img-design  caroselimage" alt="">
            </div> -->
        
-           <!-- Fifth carosel -->
-           <div class="carousel-item smallsc">
-             <img src="/assets/images/carosel_image5.jpg" class="img-design caroselimage"  alt="">
-           </div>
-       
-           <!-- sixth carosel -->
-           <div class="carousel-item smallsc">
-             <img src="/assets/images/carosel_image6.jpg" class="img-design caroselimage"  alt="">
-           </div>
-       
-           <!-- seventh carosel -->
-           <div class="carousel-item smallsc">
-             <img src="/assets/images/carosel_image7.jpg" class="img-design caroselimage" alt="">
-           </div>
-         </div>
-       
+          
          
          <!-- Left and right controls -->
          <a class="carousel-control-prev left-control" href="#demo" data-slide="prev" >
@@ -259,38 +276,24 @@
         </div>
       </div>
       <!-- This is the place where end -->
-       
-       <!-- our departments -->
-       <div class="container dept shadow mt-sm-5 mb-sm-5">
-            <h1 style="text-align: center;"> Our Departmets</h1>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="card shadow">
-                        <div class="card-body card-body_dept">
-                            <img src="/assets/images/orthodept.jpg"  class="img-design " alt="ortho">
-                        </div>
-                        <div class="card-footer" style="text-align: center;"><h6><b>ORTHOPEDIC</b></h6></div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card shadow">
-                        <div class="card-body card-body_dept">
-                            <img src="/assets/images/physiocard.jpg"  class="img-design" alt="ortho">
-                        </div>
-                        <div class="card-footer"  style="text-align: center;"><h6><b>PHYSIOTHERAPHY</b></h6></div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card shadow">
-                        <div class="card-body card-body_dept">
-                            <img src="/assets/images/neurocard.jpg"  class="img-design" alt="ortho">
-                        </div>
-                        <div class="card-footer"  style="text-align: center;"><h6><b>NEURO</b></h6></div>
-                    </div>
-                </div>
+       <!-- our deparments -->
+      <div class="container mt-sm-3 mb-sm-3 dept">
+        <h1 style="text-align: center; color: #196087; "><b>Our Deparments</b></h1>
+        <div class="row">
+            <div class="col-sm-3  hos_dept ml-sm-5 shadow">
+                <h1>Orthopedic</h1>
+                <img src="./assets/images/orthopedics-dept.png" alt="" class="w-100">
             </div>
-       </div>
-
+            <div class="col-sm-3 hos_dept ml-sm-5 shadow">
+                <h1>Physiotheraphy</h1>
+                <img src="./assets/images/physical-therapy_dept.png" alt="" class="w-100">
+            </div>
+            <div class="col-sm-3  hos_dept ml-sm-5 shadow">
+                <h1>Neuro</h1>
+                <img src="./assets/images/neuro_dept.png" alt="" class="w-100">
+            </div>
+        </div>
+    </div>
         <!-- health tips and bmi calculator start -->
        <!-- <div class="container-fluid bg-primary mb-sm-5 ">
         <div class="row">
@@ -313,6 +316,39 @@
         </div>
     </div> --> 
     <!-- health tips and bmi calculator end-->
+    <!-- galary -->
+    <div class="home-demo">
+      <h3 style="text-align: center;">Gallary</h3>
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="./assets/images/owl1.jpg" alt="" class="w-100">
+        </div>
+        <div class="item">
+          <img src="./assets/images/owl2.jpg" alt="" class="w-100">
+        </div>
+        <div class="item">
+          <img src="./assets/images/owl3.jpg" alt="" class="w-100">
+        </div>
+        <div class="item">
+          <img src="./assets/images/owl4.jpg" alt="" class="w-100">
+        </div>
+        <div class="item">
+          <img src="./assets/images/owl5.jpg" alt="" class="w-100">
+        </div>
+        <div class="item">
+          <img src="./assets/images/owl6.jpg" alt="" class="w-100">
+        </div> 
+        <div class="item">
+          <img src="./assets/images/owl7.jpg" alt="" class="w-100">
+        </div>
+        <div class="item">
+          <img src="./assets/images/owl8.jpg" alt="" class="w-100">
+        </div>
+        <div class="item">
+          <img src="./assets/images/owl9.jpg" alt="" class="w-100">
+        </div>
+      </div>
+    </div>
 
        <!-- footer -->
        <footer class="main-footer">
@@ -389,6 +425,19 @@
             </div>
         </div>
     </footer>
+    <script>
+      $(function() {
+// Owl Carousel
+var owl = $(".owl-carousel");
+owl.owlCarousel({
+  items: 4,
+  margin: 20,
+  loop: true,
+  nav: true
+});
+});
+
+    </script>
       
 </body>
 </html>
