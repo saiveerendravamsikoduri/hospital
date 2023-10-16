@@ -464,7 +464,7 @@
     margin: 0 auto;
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 768px){
 .logo-widget {
     text-align: center;
     margin-bottom: 29px;
@@ -500,3 +500,29 @@ flex-direction: column-reverse;
     margin-bottom: 50px;
 }
 }
+
+
+@media (min-width:1440px)
+{
+  .dept{
+      padding-left: 60px;
+  }
+  .butt{
+      display: none;
+  }
+   nav ul{
+       margin-left: 10px;
+   }
+   nav ul li{
+       margin-left: 50px;
+   }
+   header p{
+       margin-right: 50px;
+   }
+   .smallsc{
+      display: none;
+   }
+   .carousel{
+      margin-top: 150px;
+   }
+} 
