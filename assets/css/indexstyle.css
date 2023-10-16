@@ -101,6 +101,9 @@
     .but{
         display: none;
     }
+    .smallsc{
+        display: none;
+    }
   }
   button a{
     color: white;
@@ -163,7 +166,7 @@
     margin-bottom: 30px;
   }
   
-  @media (min-width:1080px)
+  @media (min-width:1024px)
   {
     .dept{
         padding-left: 60px;
