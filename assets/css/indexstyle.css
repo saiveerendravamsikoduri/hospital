@@ -164,7 +164,7 @@
     margin-bottom: 30px;
   }
   
-  @media (min-width:1080px)
+  /* @media (min-width:1080px)
   {
     .dept{
         padding-left: 60px;
@@ -187,7 +187,7 @@
      .carousel{
         margin-top: 150px;
      }
-  } 
+  }  */
 /* ANIMATIONS */
 .inner-in-carosel-content p,b{
     animation-name: words-in-carousel;
