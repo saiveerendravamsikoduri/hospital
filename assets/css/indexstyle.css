@@ -505,7 +505,7 @@ flex-direction: column-reverse;
 @media (min-width:1440px)
 {
   .dept{
-      padding-left: 60px;
+      padding-left: 100px;
   }
   .butt{
       display: none;
