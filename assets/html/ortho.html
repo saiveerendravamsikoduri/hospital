@@ -3,75 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <style>
-        .home-demo .item {
-    background: #ff3f4d;
-}
-.home-demo h2 {
-    color: #FFF;
-    text-align: center;
-    padding: 5rem 0;
-    margin: 0;
-    font-style: italic;
-    font-weight: 300;
-}
-.owl-carousel img{
-    object-fit: fill;
-    height: 50vh;
-}
-      </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/css/departments.css">
+    <link rel="stylesheet" href="../css/headerfooter.css">
+    
+    <title>Doctor Page 1</title>
 </head>
 <body>
-    <div class="home-demo">
-        <h3 style="text-align: center;">Gallary</h3>
-        <div class="owl-carousel owl-theme">
-          <div class="item">
-            <img src="../images/owl1.jpg" alt="" class="w-100">
-          </div>
-          <div class="item">
-            <img src="../images/owl2.jpg" alt="" class="w-100">
-          </div>
-          <div class="item">
-            <img src="../images/owl3.jpg" alt="" class="w-100">
-          </div>
-          <div class="item">
-            <img src="../images/owl4.jpg" alt="" class="w-100">
-          </div>
-          <div class="item">
-            <img src="../images/owl5.jpg" alt="" class="w-100">
-          </div>
-          <div class="item">
-            <img src="../images/owl6.jpg" alt="" class="w-100">
-          </div> 
-          <div class="item">
-            <img src="../images/owl7.jpg" alt="" class="w-100">
-          </div>
-          <div class="item">
-            <img src="../images/owl8.jpg" alt="" class="w-100">
-          </div>
-          <div class="item">
-            <img src="../images/owl9.jpg" alt="" class="w-100">
-          </div>
-        </div>
-      </div>
-      <script>
-        $(function() {
-  // Owl Carousel
-  var owl = $(".owl-carousel");
-  owl.owlCarousel({
-    items: 4,
-    margin: 20,
-    loop: true,
-    nav: true
-  });
-});
 
-      </script>
+        <!-- header start -->
+        <header class="fixed-top" style="z-index: 3;">
+            <div style="background-color: #196087;" class="locandnum">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#196087" class=" p-2 bi bi-headset bg-white rounded-circle" viewBox="0 0 16 16">
+                            <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/>
+                        </svg>
+                        <p>Your Trusted Service Provider</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#196087" class="p-2 ml-3 bi bi-telephone-fill bg-white rounded-circle" viewBox="0 0 15 16">
+                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                        </svg>
+                        <p>+91 70133 25464</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#196087" class="p-2 ml-3 bg-white bi bi-geo-alt-fill rounded-circle" viewBox="0 0 16 16">
+                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                        </svg>
+                        <p>Mandapeta, Tarvanipeta 533308</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-md bg-white navbar-dark shadow ">
+                <a class="navbar-brand" href="#"><img src="/assets/images/mainLogo.jpg" alt="logo" width="200px"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span ><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list bg-primary" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                      </svg></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                  <ul class="navbar-nav ">
+                    <li class="nav-item">
+                      <a class="nav-link"  style="color: #196087;" href="../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link"  style="color: #196087;" href="./aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle ml-lg-3" data-toggle="dropdown"  style="color: #196087;">
+                            Department
+                        </a>
+                        <div class="dropdown-menu" >
+                            <a  class="dropdown-item" href="./ortho.html"  style="color: #196087;">Orthopedic</a>
+                            <a  class="dropdown-item" href="./neuro.html"  style="color: #196087;">neuro</a>
+                            <a  class="dropdown-item" href="./physio.html"  style="color: #196087;">Physiotheraphy</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown"  >
+                      <a href="#" class="nav-link dropdown-toggle ml-lg-3" data-toggle="dropdown"  style="color: #196087;">
+                          Our Doctors
+                      </a>
+                      <div class="dropdown-menu" >
+                          <a  class="dropdown-item" href="./doctor1.html"  style="color: #196087;">Dr. Mahesh Yaddanapudi</a>
+                          <a  class="dropdown-item" href="./doctor2.html"  style="color: #196087;">Dr. B. Sai Tejaswi </a>
+                      </div>
+                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  style="color: #196087;" href="./contactus.html">Contact Us</a>
+                    </li>
+                   
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle ml-lg-3" data-toggle="dropdown"  style="color: #196087;">
+                            others
+                        </a>
+                        <div class="dropdown-menu" >
+                            <a  class="dropdown-item" href="./careers.html"  style="color: #196087;">Careers</a>
+                            <a  class="dropdown-item" href="./testimonial.html"  style="color: #196087;">Testimals</a>
+                        </div>
+                    </li> 
+                    <li class="nav-item">
+                      <button class="btn btn-primary but"><a href="./form.html">Book An Appointment</a></button>
+                    </li>      
+                  </ul>
+                </div>  
+              </nav>
+        </header>
+        <!-- header end -->
+    
+            <!-- breadcrums start -->
+            <div class="breadcrumb-wrap bg-f br-2">
+                <div class="container">
+                    <div class="breadcrumb-title">
+                        <h2>Orthopedic</h2>
+                        <ul class="breadcrumb-menu list-style">
+                            <li><a href="../../index.html">Home</a></li>
+                            <li>Orthopedic</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- breadcrums end -->
+            <!-- departmet start -->
+            <section class="department_section">
+                <div class="container">
+                    <div class="department_innertext">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <p>Orthopedics is a division of medicinefocusing on the consideration of the musculoskeletal system. This framework is comprised of muscles and bones, just as joints, tendons, and ligaments.</p>
+                                <p>An individual who has some expertise in muscular health is known as an orthopedist. Orthopedists utilize both surgical and nonsurgical ways to treat an assortment of musculoskeletal issues, for example, sports injuries, joint
+                                    pain, and back issues.</p>
+                                <h2>What should I expect during an appointment?</h2>
+                                <p>During the <a href="index.html">primary appointment</a>, the orthopedist will attempt to analyze the individual's condition. This normally incorporates directing an actual assessment and taking
+                                    X-rays.
+                                </p>
+                                <p>The orthopedist will utilize an in-office procedure, like an injection, to assist with making the analysis or treat the condition.</p>
+                                <p>In certain occurrences, additional testing is essential to affirm the determination.</p>
+                                <h3>Diagnosis</h3>
+                                <p>To assist with diagnosing an individual's condition, the orthopedist will: </p>
+                                <ol class="ol_styles">
+                                    <li>Ask about the individual's manifestations </li>
+                                    <li>Review the individual's clinical record to assemble more data about their clinical history and overall health</li>
+                                    <li>Carry out an actual assessment </li>
+                                    <li>Review any X-rays led before the appointment </li>
+                                </ol>
+                                <h3>The orthopedist may likewise arrange extra analytic tests. These might include: </h3>
+                                <ol class="ol_styles">
+                                    <li>An MRI scans</li>
+                                    <li>A CT scans</li>
+                                    <li>A bone scans</li>
+                                    <li>An ultrasound </li>
+                                    <li>Nerve conduction study </li>
+                                    <li>Blood tests</li>
+                                </ol>
+                                <h2>In-office procedures</h2>
+                                <p>An orthopedist might do in-office strategies to help analyze and treat certain musculoskeletal conditions. </p>
+                                <p>X-rays are the most normal and generally accessible symptomatic imaging method. An orthopedist will regularly perform X-rays in-office, permitting them to analyze certain conditions during an individual's appointment.</p>
+                                <p>Some acute injuries, like cracks and dislocations might need the orthopedist to control (reset) the bone or joint and immobilize it utilizing a cast, splint or brace.</p>
+                                <h3>Treatment alternatives </h3>
+                                <p>In case an individual's orthopedist can't offer in-office treatment for a specific condition, they will talk about the different treatment alternatives that are accessible for the condition.</p>
+                                <p>For ongoing musculoskeletal problems, for example, back pain or joint inflammation, the orthopedist might suggest at least one of the following medicines:</p>
+                                <ol class="ol_styles">
+                                    <li>over-the-counter mitigating prescriptions </li>
+                                    <li>rehabilitation and physical recuperation </li>
+                                    <li>home exercise programs </li>
+                                    <li>injections </li>
+                                    <li>acupuncture </li>
+                                    <li>mobility aids</li>
+                                    <li>surgery</li>
+                                </ol>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="team_block">
+                                    <div class="team_img">
+                                        <img src="../images/doc1pic.jpg" alt="Dr.Brahmeswararao Konikineni">
+                                    </div>
+                                    <div class="team_info">
+                                        <h3>Dr.Brahmeswararao Konikineni </h3>
+                                        <p>MS (Orthopaedics)</p>
+                                        <a href="#">View Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <!-- footer start -->
+        <footer class="main-footer">
+            <div class="footer-upper">
+                <div class="auto-container">
+                    <div class="row clearfix">
+                        <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                            <div class="footer-widget logo-widget">
+                                <div class="logo">
+                                    <img src="/assets/images/mainLogo.jpg" alt="Kadiyala Hospitals">
+                                </div>
+                                <ul class="social-icon-two">
+                                    <li><a href=" target="_blank">
+                                    <span class="bi bi-facebook"></span>
+                                    </a></li>
+                                    <li><a href="https://twitter.com/kadiyalahospitl" target="_blank"><span class="bi bi-instagram"></span></a></li>
+                                    <li><a href="https://www.youtube.com/channel/UC_HeTKtlnElybftdTblM4Ww" target="_blank"><span class="bi bi-youtube"></span></a></li>
+                                    <li><a href="https://www.instagram.com/kadiyalahospitals/" target="_blank"><span class="bi bi-twitter-x"></span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-column col-6 col-lg-2 col-md-6 col-sm-12">
+                            <div class="footer-widget links-widget">
+                                <h4 class="widget-title">Quick Links</h4>
+                                <div class="widget-content">
+                                    <ul class="list">
+                                        <li><a href="../../index.html">Home</a></li>
+                                        <li><a href="../html/aboutus.html">About</a></li>
+                                        <li><a href="images.html">Images</a></li>
+                                        <li><a href="../html/contactus.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-column col-6 col-lg-3 col-md-6 col-sm-12">
+                            <div class="footer-widget links-widget">
+                                <h4 class="widget-title">Useful Links</h4>
+                                <div class="widget-content">
+                                    <ul class="list">
+                                      
+                                        <li><a href="./assets/html/neuro.html">Neurology </a></li>
+                                        <li><a href="./assets/html/physio.html">Physiotherapy </a></li>
+                                        <li><a href="./assets/html/ortho.html  ">Orthopaedics </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-column col-lg-4 col-md-6 col-sm-12">
+                            <div class="footer-widget contact-widget">
+                                <h4 class="widget-title">Contact Us</h4>
+                                <div class="widget-content">
+                                    <ul class="contact-info">
+                                        <li><span class="icon bi bi-geo-alt"></span>Mandapeta, Tarvanipeta, East Godawari Andhra Pradesh 522601</li>
+                                        <li><span class="icon bi bi-phone"></span><a href="tel:7013325464">+91 7013325464</a></li>
+                                        <li><span class="icon bi bi-mailbox"></span><a href="mailto:saitejeswihospital@gmail.com">srisaitejeswihospital@gmail.com</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+              <label for="">Developer's Team</label>
+              <select name="" id="">
+                <option value="">K Vamsi</option>
+                <option value="">Anusha</option>
+                <option value=""> Pujitha</option>
+                <option value="">Anuhya</option>
+              </select>
+                <div class="auto-container clearfix">
+                    <div class="copyright">© 2021 Sri Sai Tejeswi Hospitals All Rights Reserved</div>
+                </div>
+            </div>
+        </footer>
 </body>
 </html>

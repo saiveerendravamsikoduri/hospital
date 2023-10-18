@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index Page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -15,105 +15,246 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-        <style>
-            .home-demo .item {
-        background: #ff3f4d;
-    }
-    .home-demo h2 {
-        color: #FFF;
-        text-align: center;
-        padding: 5rem 0;
-        margin: 0;
-        font-style: italic;
-        font-weight: 300;
-    }
-    .owl-carousel img{
-        object-fit: fill;
-        height: 50vh;
-    }
+    <style>
+      .facility {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+    height: 170px;
+    text-align: center;
+    position: relative;
+    opacity: 0.7;
+}
+.facility:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    opacity: 1;
+}
+.overlay-facility {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 5px;
+    background-color: #f2f2f2;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+.facility:hover .overlay-facility {
+    height: 100%;
+}
+.facility img {
+    width: 60px;
+    height: 60px;
+}
+.facili-one .facility h6 {
+    margin-top: 15px;
+    color: #2272ad;
+}
+.facility-rt-img {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+.facility-rt-img{
+ background-color: #00a3c8;
+}
+.facility-rt-img h4 {
+	color: #222;
+    letter-spacing: -0.25px;
+}
+.facility-rt-img h3 {
+    font-weight: 700;
+    letter-spacing: -0.25px;
+}
  
+
+#department_sec a{
+text-decoration:none;
+}	
+.wide-70 {
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+.department-title {
+    text-align: center;
+    margin-bottom: 20px;
+	  color: #2272ad;
+}
+.department-title h3.h3-md {
+    line-height: 1;
+    margin-bottom: 20px;
+}
+.depinfo {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #dd3333;
+    border: 1px solid #ccc;
+    padding: 40px 10px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.depinfo a {
+    color: #333;
+    text-decoration: none;
+    -webkit-transition: all 400ms ease-in-out;
+    -moz-transition: all 400ms ease-in-out;
+    -o-transition: all 400ms ease-in-out;
+    -ms-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
+}
+.depinfo-icon {
+    color: #00a3c8;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+.depinfo h5 {
+    letter-spacing: -0.5px;
+    margin-top: 25px;
+    margin-bottom: 0;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.depinfo h5.h5-sm {
+    font-size: 1.1875rem;
+}
+.depinfo:hover{
+    -webkit-	-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    background-color: #2272ad;
+}
+.depinfo:hover .depinfo-icon {
+    color: #fff;
+}
+
+.depinfo:hover .depinfo-icon {
+    -webkit-transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 55px, 0);
+}
+.depinfo:hover h5.depinfo-title {
+    -webkit-transform: translate3d(0, -110px, 0);
+    transform: translate3d(0, -110px, 0);
+    color: #fff;
+}
+
+@media only screen and (min-width: 580px){
+.depinfo {
+    padding: 29px 10px;
+}
+}
 
 
     </style>
+</head>
 <body>
     <!-- header start -->
     <header class="fixed-top" style="z-index:3;">
-        <div style="background-color: #196087;" class="locandnum">
-            <div class="container-fluid">
-                <div class="d-flex align-items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#196087" class=" p-2 bi bi-headset bg-white rounded-circle" viewBox="0 0 16 16">
-                        <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/>
-                    </svg>
-                    <p>Your Trusted Service Provider</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#196087" class="p-2 ml-3 bi bi-telephone-fill bg-white rounded-circle" viewBox="0 0 15 16">
-                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                    </svg>
-                    <p>+91 70133 25464</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#196087" class="p-2 ml-3 bg-white bi bi-geo-alt-fill rounded-circle" viewBox="0 0 16 16">
-                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-                    </svg>
-                    <p>Mandapeta, Tarvanipeta 533308</p>
-                </div>
-            </div>
-        </div>
-        <nav class="navbar navbar-expand-md bg-white navbar-dark shadow ">
-            <a class="navbar-brand" href="#"><img src="/assets/images/mainLogo.jpg" alt="logo" width="200px"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span ><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list bg-primary" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                  </svg></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-              <ul class="navbar-nav ">
-                <li class="nav-item">
-                  <a class="nav-link"  style="color: black;" href="/index.html"><b>Home</b></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link"  style="color: black" href="./assets/html/aboutus.html"><b>About Us</b></a>
-                </li>
-                <li class="nav-item dropdown"  >
-                    <a href="#" class="nav-link dropdown-toggle ml-lg-3" data-toggle="dropdown"  style="color: black;">
-                      <b>Department</b>
-                    </a>
-                    <div class="dropdown-menu" >
-                        <a  class="dropdown-item" href="./assets/html/ortho.html"  style="color: black;"><b>Orthopedic</b></a>
-                        <a  class="dropdown-item" href="./assets/html/neuro.html"  style="color: black;"><b>neuro</b></a>
-                        <a  class="dropdown-item" href="./assets/html/physio.html"  style="color: black;"><b>Physiotheraphy</b></a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown"  >
+      <div style="background-color: #183E53;" class="locandnum">
+          <div class="container-fluid">
+              <div class="d-flex align-items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#196087" class=" p-2 bi bi-headset bg-white rounded-circle" viewBox="0 0 16 16">
+                      <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/>
+                  </svg>
+                  <p>Your Trusted Service Provider</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#196087" class="p-2 ml-3 bi bi-telephone-fill bg-white rounded-circle" viewBox="0 0 15 16">
+                      <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                  </svg>
+                  <p>+91 70133 25464</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#196087" class="p-2 ml-3 bg-white bi bi-geo-alt-fill rounded-circle" viewBox="0 0 16 16">
+                      <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                  </svg>
+                  <p>Mandapeta, Tarvanipeta 533308</p>
+              </div>
+          </div>
+      </div>
+      <nav class="navbar navbar-expand-md bg-white navbar-dark shadow ">
+          <a class="navbar-brand" href="#"><img src="/assets/images/mainLogo.jpg" alt="logo" width="200px"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span ><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list bg-primary" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <a class="nav-link"  style="color: black;" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  style="color: black" href="./assets/html/aboutus.html">About&nbsp;Us</a>
+              </li>
+              <li class="nav-item dropdown"  >
                   <a href="#" class="nav-link dropdown-toggle ml-lg-3" data-toggle="dropdown"  style="color: black;">
-                    <b> Our Doctors</b>
+                    Department
                   </a>
                   <div class="dropdown-menu" >
-                      <a  class="dropdown-item" href="./assets/html/doctor1.html"  style="color: black;"><b>Dr. Mahesh Yaddanapudi</b></a>
-                      <a  class="dropdown-item" href="./assets/html/doctor2.html"  style="color: black;"><b>Dr. B. Sai Tejaswi </b></a>
+                      <a  class="dropdown-item" href="./assets/html/ortho.html"  style="color: black;">Orthopedic</a>
+                      <a  class="dropdown-item" href="./assets/html/neuro.html"  style="color: black;">neuro</a>
+                      <a  class="dropdown-item" href="./assets/html/physio.html"  style="color: black;">Physiotheraphy</a>
                   </div>
               </li>
-                <li class="nav-item">
-                    <a class="nav-link"  style="color: black;" href="./assets/html/contactus.html"><b>Contact Us</b></a>
-                </li>
-                
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle ml-lg-3" data-toggle="dropdown"  style="color: black;">
-                      <b>others</b>
-                    </a>
-                    <div class="dropdown-menu " style="z-index: 1;" >
-                        <a  class="dropdown-item" href="./assets/html/careers.html"  style="color: black;"><b>Careers</b></a>
-                        <a  class="dropdown-item" href="./assets/html/testimonial.html"  style="color: black;"><b>Testimals</b></a>
-                    </div>
-                </li> 
-                <li class="nav-item">
-                  <button class="btn btn-primary but"><a href="./assets/html/form.html">Book An Appointment</a></button>
-                </li>      
-              </ul>
-            </div>  
-          </nav>
-    </header>
-    <!-- header end -->
+              <li class="nav-item dropdown"  >
+                <a href="#" class="nav-link dropdown-toggle ml-lg-3" data-toggle="dropdown"  style="color: black;">
+                   Our Doctors
+                </a>
+                <div class="dropdown-menu" >
+                    <a  class="dropdown-item" href="./assets/html/doctor1.html"  style="color: black;">Dr. Mahesh Yaddanapudi</a>
+                    <a  class="dropdown-item" href="./assets/html/doctor2.html"  style="color: black;">Dr. B. Sai Tejaswi </a>
+                </div>
+            </li>
+              <li class="nav-item">
+                  <a class="nav-link"  style="color: black;" href="./assets/html/contactus.html">Contact&nbsp;Us</a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle ml-lg-3" data-toggle="dropdown"  style="color: black;">
+                    others
+                  </a>
+                  <div class="dropdown-menu " style="z-index: 1;" >
+                      <a  class="dropdown-item" href="./assets/html/careers.html"  style="color: black;">Careers</a>
+                      <a  class="dropdown-item" href="./assets/html/testimonial.html"  style="color: black;">Testimals</a>
+                  </div>
+              </li> 
+              <li class="nav-item">
+                <button class="btn btn-primary but"><a href="./assets/html/form.html">Book&nbsp;An&nbsp;Appointment</a></button>
+              </li>      
+            </ul>
+          </div>  
+        </nav>
+  </header>
+  <!-- header end -->
+
 
     <!-- carosel  start -->
-    <div id="demo" class="carousel slide container-fluid" data-ride="carousel">
+    <div id="demo" class="carousel slide" data-ride="carousel">
       <div style="position: absolute; top:45; right: 0;" class="butt"><button class="btn btn-primary"><a href="./assets/html/form.html">Book An Appointment</a></button></div>
         <!-- The first carousel -->
          <div class="carousel-inner" >
@@ -125,7 +266,7 @@
              <div class="d-flex c2">
                <div  class="outer-in-carosel-content" >
                  <div style="height: 65vh;  width: 70%;">
-                   <p style="color: #196087;">
+                   <p >
                      <b>
                      WE TAKE OF YOUR HEALTH
                      </b>
@@ -229,10 +370,7 @@
              </div>
            </div>
        
-           <!-- Fourth carosel
-           <div class="carousel-item">
-             <img src="/assets/images/carosel_image4.jpg" class="img-design  caroselimage" alt="">
-           </div> -->
+  
        
           
          
@@ -250,194 +388,218 @@
            </svg></span>
          </a>
        </div>
+<!-- carosel end -->
+<!-- facilities start -->
+<section class="facili-one wide-100">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-9 order-2">
+              <div class="row">
+                  <div class="col-lg-3 col-md-4 col-6">
+                      <div class="facility">
+                          <div class="overlay-facility"></div>
+                          <img src="./assets/images/emergency&critical_facility.png" alt="">
+                          <h6>Emergency & Critical Care Services</h6>
 
-       <!-- This is the place where start -->
-       <div class="container-fluid shadow p-sm-5 place_outer" style="background-color: #196087; margin-top: 50px;">
-        <h3 style="text-align: center; margin-bottom: 30px; color: white;">This Is The Place Where</h3>
-        <div class="row     d-flex justify-content-around rounded" style="background-color: #196087;">
-            <div class="col-sm-3 shadow p-sm-5 ml-sm-5 p-md-5 ml-md-5 bg-white rounded position-relative  place_inner">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-activity rounded-circle bg-white place_inner" viewBox="0 0 16 16" style=" color:#196087; border: 2px #196087 solid; padding:10px; position:absolute; top:-25; left:150; ">
-                    <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"/>
-                  </svg>
-                Specialized medical care in orthopedics, neurology, and physiotherapy
-            </div>
-            <div class="col-sm-3 shadow p-sm-5 ml-sm-5 p-md-5 ml-md-5 bg-white rounded position-relative  place_inner">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-activity rounded-circle bg-white place_inner " viewBox="0 0 16 16" style="color:#196087 ;border: 2px #196087 solid; padding:10px; position:absolute; top:-25; left:150;">
-                    <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"/>
-                  </svg>
-                Dedicated team of experienced doctors, nurses, and therapists
-            </div>
-            <div class="col-sm-3 shadow p-sm-5 ml-sm-5 p-md-5 ml-md-5 bg-white rounded position-relative  place_inner">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-activity rounded-circle bg-white place_inner" viewBox="0 0 16 16" style="color:#196087;border: 2px #196087 solid; padding:10px; position:absolute; top:-25; left:150;">
-                    <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"/>
-                  </svg>
-                Tailored and personalized care plans for each patient
-            </div>
-        </div>
-      </div>
-      <!-- This is the place where end -->
-       <!-- our deparments -->
-      <div class="container mt-sm-3 mb-sm-3 dept">
-        <h1 style="text-align: center; color: #196087; "><b>Our Deparments</b></h1>
-        <div class="row">
-            <div class="col-sm-3  hos_dept ml-sm-5 shadow">
-                <h3>Orthopedic</h3>
-                <img src="./assets/images/orthopedics-dept.png" alt="" class="w-100">
-            </div>
-            <div class="col-sm-3 hos_dept ml-sm-5 shadow">
-                <h3>Physiotheraphy</h3>
-                <img src="./assets/images/physical-therapy_dept.png" alt="" class="w-100">
-            </div>
-            <div class="col-sm-3  hos_dept ml-sm-5 shadow">
-                <h3>Neuro</h3>
-                <img src="./assets/images/neuro_dept.png" alt="" class="w-100">
-            </div>
-        </div>
-    </div>
-        <!-- health tips and bmi calculator start -->
-       <!-- <div class="container-fluid bg-primary mb-sm-5 ">
-        <div class="row">
-          
-            <div class="col-md-4 bg-white m-sm-5 rounded" style="padding-bottom: 30px;">
-                <div class="bmi-container">
-                    <h2>BMI Calculator</h2>
-                    <div class="form-group">
-                        <label for="weight">Weight (kg):</label>
-                        <input type="number" class="form-control" id="weight" placeholder="Enter your weight">
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                      <div class="facility">
+                          <div class="overlay-facility"></div>
+                          <img src="./assets/images/pharmacy_facility.png" alt="">
+                          <h6>Pharmacy</h6>
+
+                      </div>
+                  </div>
+                  <div class="col-lg-3  col-md-4 col-6">
+                      <div class="facility">
+                          <div class="overlay-facility"></div>
+                          <img src="./assets/images/x-rays_facility.png" alt="">
+                          <h6>X-Ray</h6>
+
+                      </div>
+                  </div>
+
+                  <div class="col-lg-3  col-md-4 col-6">
+                    <div class="facility">
+                        <div class="overlay-facility"></div>
+                        <img src="./assets/images/burnsunit_facilities.png" alt="">
+                        <h6>Burns Unit</h6>
+
                     </div>
-                    <div class="form-group">
-                        <label for="height">Height (cm):</label>
-                        <input type="number" class="form-control" id="height" placeholder="Enter your height">
-                    </div>
-                    <button class="btn btn-primary" onclick="calculateBMI()">Calculate BMI</button>
-                    <div id="result"></div>
                 </div>
-            </div>
-        </div>
-    </div> --> 
-    <!-- health tips and bmi calculator end-->
-    <!-- galary -->
-    <div class="home-demo">
-      <h3 style="text-align: center;">Gallary</h3>
-      <div class="owl-carousel owl-theme">
-        <div class="item">
-          <img src="./assets/images/owl1.jpg" alt="" class="w-100">
-        </div>
-        <div class="item">
-          <img src="./assets/images/owl2.jpg" alt="" class="w-100">
-        </div>
-        <div class="item">
-          <img src="./assets/images/owl3.jpg" alt="" class="w-100">
-        </div>
-        <div class="item">
-          <img src="./assets/images/owl4.jpg" alt="" class="w-100">
-        </div>
-        <div class="item">
-          <img src="./assets/images/owl5.jpg" alt="" class="w-100">
-        </div>
-        <div class="item">
-          <img src="./assets/images/owl6.jpg" alt="" class="w-100">
-        </div> 
-        <div class="item">
-          <img src="./assets/images/owl7.jpg" alt="" class="w-100">
-        </div>
-        <div class="item">
-          <img src="./assets/images/owl8.jpg" alt="" class="w-100">
-        </div>
-        <div class="item">
-          <img src="./assets/images/owl9.jpg" alt="" class="w-100">
-        </div>
-      </div>
-    </div>
 
-       <!-- footer -->
-       <footer class="main-footer">
-        <div class="footer-upper">
-            <div class="auto-container ">
-                <div class="row clearfix">
-                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
-                        <div class="footer-widget logo-widget">
-                            <div class="logo">
-                                <img src="/assets/images/mainLogo.jpg" alt="Kadiyala Hospitals">
-                            </div>
-                            <ul class="social-icon-two">
-                                <li><a href=" target="_blank">
-                                <span class="bi bi-facebook"></span>
-                                </a></li>
-                                <li><a href="https://twitter.com/kadiyalahospitl" target="_blank"><span class="bi bi-instagram"></span></a></li>
-                                <li><a href="https://www.youtube.com/channel/UC_HeTKtlnElybftdTblM4Ww" target="_blank"><span class="bi bi-youtube"></span></a></li>
-                                <li><a href="https://www.instagram.com/kadiyalahospitals/" target="_blank"><span class="bi bi-twitter-x"></span></a>
-                                </li>
+                  <div class="col-lg-3  col-md-4 col-6">
+                      <div class="facility">
+                          <div class="overlay-facility"></div>
+                          <img src="./assets/images/mediacalememgency_faciluty.png" alt="">
+                          <h6>Medical Emergencies</h6>
+
+                      </div>
+                  </div>
+
+                  <div class="col-lg-3  col-md-4 col-6">
+                      <div class="facility">
+                          <div class="overlay-facility"></div>
+                          <img src="./assets/images/surgicalemergency_facility.png" alt="">
+                          <h6>Surgical Emergencies</h6>
+
+                      </div>
+                  </div>
+                  <div class="col-lg-3  col-md-4 col-6">
+                      <div class="facility">
+                          <div class="overlay-facility"></div>
+                          <img src="./assets/images/ambulance_facility.png" alt="">
+                          <h6>Ambulence</h6>
+
+                      </div>
+                  </div>
+              
+              </div>
+          </div>
+          <div class="col-lg-3 order-1 col-sm-12">
+              <div class="facility-rt-img bg-blue">
+                  <span>
+                      <h3 class="text-white">Sri Sai Tejeswi</h3>
+                      <h4><span class="light-text text-white">Provide 24 Hours Facilities<span></span></span></h4>
+                  </span>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- facility end -->
+
+ <!-- our deparments start -->
+ <section id="department_sec" class="wide-70 department-section division">
+  <div class="container">
+ <div class="row">
+          <div class="col-lg-10 offset-lg-1 department-title">
+     <!-- Title 	-->
+             <h3 class="h3-md color-primary" style="font-family: Poppins;">Our Departments</h3>
+   </div>
+     </div>
+ <div class="row">
+   <div class="col-sm-6 col-lg-4 col-6">
+             <div class="depinfo wow fadeInUp pd-ad" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                  <a href="">
+         <div class="depinfo-icon icon-xl">
+                         <span class="all-service-img">
+                             <img src="./assets/images/orthopedics-dept.png" alt="" width="70">
+                         </span>
+                     </div>
+         <h5 class="h5-sm depinfo-title steelblue-color">Orthopedic</h5>
+        </a>
+     </div>
+  </div>	
+  
+  <div class="col-sm-6 col-lg-4 col-6">
+    <div class="depinfo wow fadeInUp pd-ad" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+         <a href="">
+<div class="depinfo-icon icon-xl">
+                <span class="all-service-img">
+                    <img src="./assets/images/physical-therapy_dept.png" alt="" width="70">
+                </span>
+            </div>
+<h5 class="h5-sm depinfo-title steelblue-color">Physiotheraphy</h5>
+</a>
+</div>
+</div>	
+
+<div class="col-sm-6 col-lg-4 col-6">
+  <div class="depinfo wow fadeInUp pd-ad" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+       <a href="">
+<div class="depinfo-icon icon-xl">
+              <span class="all-service-img">
+                  <img src="./assets/images/neuro_dept.png" alt="" width="70">
+              </span>
+          </div>
+<h5 class="h5-sm depinfo-title steelblue-color">Nuero</h5>
+</a>
+</div>
+</div>	
+ </div> <!-- End row -->    
+  
+</div> <!-- End container -->
+</section>
+  <!-- Our Departments end -->
+
+
+  <footer class="main-footer">
+    <div class="footer-upper">
+        <div class="auto-container">
+            <div class="row clearfix">
+                <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-widget logo-widget">
+                        <div class="logo">
+                            <img src="/assets/images/mainLogo.jpg" alt="Kadiyala Hospitals">
+                        </div>
+                        <ul class="social-icon-two">
+                            <li><a href=" target="_blank">
+                            <span class="bi bi-facebook"></span>
+                            </a></li>
+                            <li><a href="https://twitter.com/kadiyalahospitl" target="_blank"><span class="bi bi-instagram"></span></a></li>
+                            <li><a href="https://www.youtube.com/channel/UC_HeTKtlnElybftdTblM4Ww" target="_blank"><span class="bi bi-youtube"></span></a></li>
+                            <li><a href="https://www.instagram.com/kadiyalahospitals/" target="_blank"><span class="bi bi-twitter-x"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-column col-6 col-lg-2 col-md-6 col-sm-12">
+                    <div class="footer-widget links-widget">
+                        <h4 class="widget-title">Quick Links</h4>
+                        <div class="widget-content">
+                            <ul class="list">
+                                <li><a href="../../index.html">Home</a></li>
+                                <li><a href="../html/aboutus.html">About</a></li>
+                                <li><a href="images.html">Images</a></li>
+                                <li><a href="../html/contactus.html">Contact</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="footer-column col-6 col-lg-2 col-md-6 col-sm-12">
-                        <div class="footer-widget links-widget">
-                            <h4 class="widget-title">Quick Links</h4>
-                            <div class="widget-content">
-                                <ul class="list">
-                                    <li><a href="/index.html">Home</a></li>
-                                    <li><a href="./assets/html/aboutus.html">About</a></li>
-                                    <li><a href="images.html">Images</a></li>
-                                    <li><a href="./assets/html/contactus.html">Contact</a></li>
-                                </ul>
-                            </div>
+                </div>
+                <div class="footer-column col-6 col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-widget links-widget">
+                        <h4 class="widget-title">Useful Links</h4>
+                        <div class="widget-content">
+                            <ul class="list">
+                              
+                                <li><a href="./assets/html/neuro.html">Neurology </a></li>
+                                <li><a href="./assets/html/physio.html">Physiotherapy </a></li>
+                                <li><a href="./assets/html/ortho.html  ">Orthopaedics </a></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="footer-column col-6 col-lg-3 col-md-6 col-sm-12">
-                        <div class="footer-widget links-widget">
-                            <h4 class="widget-title">Useful Links</h4>
-                            <div class="widget-content">
-                                <ul class="list">
-                                  
-                                    <li><a href="./assets/html/neuro.html">Neurology </a></li>
-                                    <li><a href="./assets/html/physio.html">Physiotherapy </a></li>
-                                    <li><a href="./assets/html/ortho.html  ">Orthopaedics </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-column col-lg-4 col-md-6 col-sm-12">
-                        <div class="footer-widget contact-widget">
-                            <h4 class="widget-title">Contact Us</h4>
-                            <div class="widget-content">
-                                <ul class="contact-info">
-                                    <li><span class="icon bi bi-geo-alt"></span>Mandapeta, Tarvanipeta, East Godawari Andhra Pradesh 522601</li>
-                                    <li><span class="icon bi bi-phone"></span><a href="tel:7013325464">+91 7013325464</a></li>
-                                    <li><span class="icon bi bi-mailbox"></span><a href="mailto:saitejeswihospital@gmail.com">srisaitejeswihospital@gmail.com</a></li>
-                                </ul>
-                            </div>
+                </div>
+                <div class="footer-column col-lg-4 col-md-6 col-sm-12">
+                    <div class="footer-widget contact-widget">
+                        <h4 class="widget-title">Contact Us</h4>
+                        <div class="widget-content">
+                            <ul class="contact-info">
+                                <li><span class="icon bi bi-geo-alt"></span>Mandapeta, Tarvanipeta, East Godawari Andhra Pradesh 522601</li>
+                                <li><span class="icon bi bi-phone"></span><a href="tel:7013325464">+91 7013325464</a></li>
+                                <li><span class="icon bi bi-mailbox"></span><a href="mailto:saitejeswihospital@gmail.com">srisaitejeswihospital@gmail.com</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-          <label for="">Developer's Team</label>
-          <select name="" id="">
-            <option value="">K Vamsi</option>
-            <option value="">Anusha</option>
-            <option value=""> Pujitha</option>
-            <option value="">Anuhya</option>
-          </select>
-            <div class="auto-container clearfix">
-                <div class="copyright">© 2021 Sri Sai Tejeswi Hospitals All Rights Reserved</div>
-            </div>
+    </div>
+    <div class="footer-bottom">
+      <label for="">Developer's Team</label>
+      <select name="" id="">
+        <option value="">K Vamsi</option>
+        <option value="">Anusha</option>
+        <option value=""> Pujitha</option>
+        <option value="">Anuhya</option>
+      </select>
+        <div class="auto-container clearfix">
+            <div class="copyright">© 2021 Sri Sai Tejeswi Hospitals All Rights Reserved</div>
         </div>
-    </footer>
-    <script>
-      $(function() {
-// Owl Carousel
-var owl = $(".owl-carousel");
-owl.owlCarousel({
-  items: 4,
-  margin: 20,
-  loop: true,
-  nav: true
-});
-});
-
-    </script>
-      
+    </div>
+</footer>
+  
 </body>
 </html>

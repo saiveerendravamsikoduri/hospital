@@ -78,6 +78,19 @@
 }
 /* media quaries */
 @media (max-width:768px){
+    nav ul{
+        margin-left: 0px;
+    }
+    nav ul li{
+        margin-left: 0px;
+    }
+    .logo-widget {
+        text-align: center;
+        margin-bottom: 29px;
+    }
+    .smallsc{
+        display: none;
+    }
     .outer-in-carosel-content{
       padding-left: 0px;
       overflow: auto;
@@ -104,7 +117,11 @@
     .smallsc{
         display: none;
     }
-  }
+    .navbar-nav {
+        min-width: 700px; 
+    }  
+
+}
   button a{
     color: white;
   }
@@ -112,9 +129,7 @@
     text-decoration: none;
     color: white;
   }
-  .navbar-nav {
-    min-width: 800px; 
-}
+
   @media (max-width:480px)
   {
     .c2{
@@ -123,9 +138,8 @@
     .butt{
         display: none;
     }
-    tips-container{
-        margin-bottom: 50px;
-    }
+   
+
       .locandnum{
           display:none;
       }
@@ -162,23 +176,18 @@
     }
 
   }
-  .card{
-    margin-bottom: 30px;
-  }
   
-  @media (min-width:1024px)
+  @media (min-width:1080px)
   {
-    .dept{
-        padding-left: 60px;
-    }
+    
     .butt{
         display: none;
     }
      nav ul{
-         margin-left: 100px;
+         margin-left: 10px;
      }
      nav ul li{
-         margin-left: 50px;
+         margin-left: 30px;
      }
      header p{
          margin-right: 50px;
@@ -190,36 +199,6 @@
         margin-top: 150px;
      }
   } 
-/* ANIMATIONS */
-.inner-in-carosel-content p,b{
-    animation-name: words-in-carousel;
-    animation-duration: 4s;
-  }
-  @keyframes words-in-carousel {
-    from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  }
-  .carousel button{
-    animation-name:button_in_carosel;
-    animation: 6s;
-  }
-  @keyframes button_in_carosel {
-    from {
-        display: none;
-      }
-      to {
-        display: none;
-      }
-  }
-
-
-
 
 
 /* footer */
@@ -280,7 +259,7 @@
     left: 0;
     top: 32px;
 }
-/* /Footer Logo Widget/ */
+/Footer Logo Widget/
 
 .logo-widget {
     position: relative;
@@ -303,7 +282,7 @@
 }
 
 
-/* /Links Widget/ */ 
+/* /Links Widget/ */
 .main-footer .links-widget {
     position: relative;
 }
@@ -344,7 +323,7 @@
 }
 
 
-/* /footer COntactUs Widget/ */
+/footer COntactUs Widget/
 
 .main-footer .contact-widget {
     position: relative;
@@ -466,13 +445,10 @@
     margin: 0 auto;
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 800px){
 .logo-widget {
     text-align: center;
     margin-bottom: 29px;
-}
-.smallsc{
-    display: none;
 }
 }
 
@@ -481,43 +457,20 @@
 	display:none;
 }
 }
-/* departments */
-.hos_dept{
-    padding: 50px;
-    text-align: center;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: red;
-    border-radius: 5%;
-}
-.hos_dept:hover{
-background-color: #196087;
-flex-direction: column-reverse;
-}
-@media (max-width:480px)
-{
-.hos_dept{
-    margin-bottom: 50px;
-}
-}
+
+
 
 
 @media (min-width:1440px)
 {
-  .dept{
-      padding-left: 100px;
-  }
+ 
   .butt{
       display: none;
   }
    nav ul{
-       margin-left: 10px;
+       margin-left: 300px;
    }
-   nav ul li{
-       margin-left: 50px;
-   }
+   
    header p{
        margin-right: 50px;
    }
@@ -527,4 +480,67 @@ flex-direction: column-reverse;
    .carousel{
       margin-top: 150px;
    }
-} 
+}
+
+
+
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    color: black;
+    text-decoration: none;
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color:#E51E1E;
+    color: white;
+}
+
+/* Active menu item styles */
+.dropdown-menu a.active {
+    background-color: #4CAF50;
+    color:white;
+}
+
+
+@media (min-width:1024px)
+  {
+   
+    .butt{
+        display: none;
+    }
+    .but{
+        max-width: fit-content;
+    }
+    
+
+     nav ul li{
+         margin-left:  0px;
+     }
+     header p{
+         margin-right: 30px;
+     }
+     .smallsc{
+        display: none;
+     }
+     .carousel{
+        margin-top: 150px;
+     }
+     nav{
+        min-width: 700px;
+     }
+  } 
