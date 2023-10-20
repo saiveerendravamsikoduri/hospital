@@ -12,283 +12,82 @@
     <link rel="stylesheet" href="/assets/css/indexstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <style>
-      .facility {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-    padding: 12px;
-    transition: all 0.3s ease-in-out;
-    height: 170px;
-    text-align: center;
-    position: relative;
-    opacity: 0.7;
-}
-.facility:hover {
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    opacity: 1;
-}
-.overlay-facility {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    height: 5px;
-    background-color: #f2f2f2;
-    z-index: -1;
-    transition: all 0.3s ease-in-out;
-}
-.facility:hover .overlay-facility {
-    height: 100%;
-}
-.facility img {
-    width: 60px;
-    height: 60px;
-}
-.facili-one .facility h6 {
-    margin-top: 15px;
-    color: #2272ad;
-}
-.facility-rt-img {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-}
-.facility-rt-img{
- background-color: #00a3c8;
-}
-.facility-rt-img h4 {
-	color: #222;
-    letter-spacing: -0.25px;
-}
-.facility-rt-img h3 {
-    font-weight: 700;
-    letter-spacing: -0.25px;
-}
- 
-
-#department_sec a{
-text-decoration:none;
-}	
-.wide-70 {
-    padding-top: 100px;
-    padding-bottom: 20px;
-}
-.department-title {
-    text-align: center;
-    margin-bottom: 20px;
-	  color: #2272ad;
-}
-.department-title h3.h3-md {
-    line-height: 1;
-    margin-bottom: 20px;
-}
-.depinfo {
-    text-align: center;
-    margin-bottom: 30px;
-    background-color: #dd3333;
-    border: 1px solid #ccc;
-    padding: 40px 10px;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    -webkit-transition: all 300ms ease-in-out;
-    -moz-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
-    -ms-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.depinfo a {
-    color: #333;
-    text-decoration: none;
-    -webkit-transition: all 400ms ease-in-out;
-    -moz-transition: all 400ms ease-in-out;
-    -o-transition: all 400ms ease-in-out;
-    -ms-transition: all 400ms ease-in-out;
-    transition: all 400ms ease-in-out;
-}
-.depinfo-icon {
-    color: #00a3c8;
-    -webkit-transition: all 300ms ease-in-out;
-    -moz-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
-    -ms-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-}
-.depinfo h5 {
-    letter-spacing: -0.5px;
-    margin-top: 25px;
-    margin-bottom: 0;
-    -webkit-transition: all 300ms ease-in-out;
-    -moz-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
-    -ms-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-    color: #fff;
-    letter-spacing: 1px;
-}
-
-.depinfo h5.h5-sm {
-    font-size: 1.1875rem;
-}
-.depinfo:hover{
-    -webkit-	-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-    background-color: #2272ad;
-}
-.depinfo:hover .depinfo-icon {
-    color: #fff;
-}
-
-.depinfo:hover .depinfo-icon {
-    -webkit-transform: translate3d(0, 40px, 0);
-    transform: translate3d(0, 55px, 0);
-}
-.depinfo:hover h5.depinfo-title {
-    -webkit-transform: translate3d(0, -110px, 0);
-    transform: translate3d(0, -110px, 0);
-    color: #fff;
-}
-
-@media only screen and (min-width: 580px){
-.depinfo {
-    padding: 29px 10px;
-}
-}
-
-
-    </style>
-    <script >
-      // search-box open close js code
-let navbar = document.querySelector(".navbar");
-let searchBox = document.querySelector(".search-box .bx-search");
-// let searchBoxCancel = document.querySelector(".search-box .bx-x");
-
-searchBox.addEventListener("click", ()=>{
-navbar.classList.toggle("showInput");
-if(navbar.classList.contains("showInput")){
-  searchBox.classList.replace("bx-search" ,"bx-x");
-}else {
-  searchBox.classList.replace("bx-x" ,"bx-search");
-}
-});
-
-// sidebar open close js code
-let navLinks = document.querySelector(".nav-links");
-let menuOpenBtn = document.querySelector(".navbar .bx-menu");
-let menuCloseBtn = document.querySelector(".nav-links .bx-x");
-menuOpenBtn.onclick = function() {
-navLinks.style.left = "0";
-}
-menuCloseBtn.onclick = function() {
-navLinks.style.left = "-100%";
-}
-
-
-// sidebar submenu open close js code
-let htmlcssArrow = document.querySelector(".htmlcss-arrow");
-htmlcssArrow.onclick = function() {
-navLinks.classList.toggle("show1");
-}
-let moreArrow = document.querySelector(".more-arrow");
-moreArrow.onclick = function() {
-navLinks.classList.toggle("show2");
-}
-let jsArrow = document.querySelector(".js-arrow");
-jsArrow.onclick = function() {
-navLinks.classList.toggle("show3");
-}
-    </script>
+    <link rel="stylesheet" href="./assets/css/headerfooter.css">
 </head>
 <body>
-    <!-- header start -->
-    <header class="fixed-top" style="z-index:3;">
-      <div style="background-color: #183E53;" class="locandnum">
-          <div class="container-fluid">
-              <div class="d-flex align-items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#196087" class=" p-2 bi bi-headset bg-white rounded-circle" viewBox="0 0 16 16">
-                      <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/>
-                  </svg>
-                  <p>Your Trusted Service Provider</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#196087" class="p-2 ml-3 bi bi-telephone-fill bg-white rounded-circle" viewBox="0 0 15 16">
-                      <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                  </svg>
-                  <p>+91 70133 25464</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#196087" class="p-2 ml-3 bg-white bi bi-geo-alt-fill rounded-circle" viewBox="0 0 16 16">
-                      <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-                  </svg>
-                  <p>Mandapeta, Tarvanipeta 533308</p>
-              </div>
-          </div>
-      </div>
-      <nav>
-        <div class="navbar">
-          <i class='bx bx-menu'></i>
-          <div class="logo"><a href="#"></a></div>
-          <div class="nav-links">
-            <div class="sidebar-logo">
-              <span class="logo-name"></span>
-              <i class='bx bx-x' ></i>
-            </div>
-            <ul class="links">
-              <li><a href="#">HOME</a></li>
-              <li>
-                <li><a href="#">ABOUT US</a></li>
-              <li>
+  <header class="fixed-top" style="z-index:3;">
+    <div class="header-top_sec bg-title py-2 d-none d-md-block">
+			<div class="container py-1">
+				<div class="row justify-content-center justify-content-md-between">
+					<div class="col-auto">
+						<ul class="header-top_info list-unstyled m-0">
+							<li><span><i class="bi bi-headset"></i></span>Your Trusted Service Provider</li>
+							<li><span><i class="bi bi-geo-alt-fill"></i></span>Mandapeta, Tarvanipeta 533308</li>
+							<li><span><i class="bi bi-telephone-fill"></i></span>+91 70133 25464</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 
-                <a href="#">DEPARTMENTS</a>
-                <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
-                <ul class="htmlCss-sub-menu sub-menu">
-                  <li><a href="#">ORTHOPEDIC</a></li>
-                  <li><a href="#">PHYSIOTHERAPHY</a></li>
-                  <li><a href="#">NEURO</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">OUR DOCTORS</a>
-                <i class='bx bxs-chevron-down js-arrow arrow '></i>
-                <ul class="js-sub-menu sub-menu">
-                  <li><a href="#">Dr. Mahesh Yaddanapudi</a></li>
-                  <li><a href="#">Dr. B. Sai Tejaswi</a></li>
-                </ul>
-              </li>
-              <li><a href="#">GALLARY</a></li>
-              <li><a href="#">CONTACT US</a></li>
-              <li>
-                <a href="#">OTHERS</a>
-                <i class='bx bxs-chevron-down js-arrow arrow '></i>
-                <ul class="js-sub-menu sub-menu">
-                  <li><a href="#">CARREERS</a></li>
-                  <li><a href="#">TESTIMONIALS  </a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="search-box">
-            <i class='bx bx-search'></i>
-            <div class="input-box">
-              <input type="text" placeholder="Search...">
-            </div>
-          </div>
+</div>
+  <nav>
+    <div class="navbar">
+      <i class='bx bx-menu'></i>
+      <div class="logo"><a href="#">
+        <img src="./assets/images/mainLogo.jpg " style="width:200px;">
+      </a></div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name"><b>Sri Sai Tejeswi</b></span>
+          <i class='bx bx-x' ></i>
         </div>
-      </nav>
-  </header>
+        <ul class="links">
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./assets/html/aboutus.html">ABOUT US</a></li>
+          <li>
+            <a href="#">OUR DOCOTRS</a>
+            <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+            <ul class="htmlCss-sub-menu sub-menu">
+              <li><a href="./assets/html/doctor1.html">Dr. Mahesh Yaddanapudi</a></li>
+              <li><a href="./assets/html/doctor2.html">Dr. B. Sai Tejaswi </a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">OUR DEPARTMENTS</a>
+            <i class='bx bxs-chevron-down js-arrow arrow '></i>
+            <ul class="js-sub-menu sub-menu">
+              <li><a href="./assets/html/ortho.html">ORTHOPEDIC</a></li>
+              <li><a href="./assets/html/neuro.html">NEURO</a></li>
+              <li><a href="./assets/html/physio.html">PHYSIOTHERAPHY</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">OTHER PAGES</a>
+            <i class='bx bxs-chevron-down other-arrow arrow '></i>
+            <ul class="other-sub-menu sub-menu">
+              <li><a href="./assets/html/careers.html">Careers</a></li>
+              <li><a href="./assets/html/testimonial.html">Testimonials</a></li>
+            </ul>
+          </li>
+         
+          <li><a href="./assets/html/contactus.html">CONTACT US</a></li>
+        </ul>
+      </div>
+      <!-- <div class="">APPOINMENT</div> -->
+      <div class="search-box">
+        <i class='bx bx-search'></i>
+        <div class="input-box">
+          <input type="text" placeholder="Search...">
+        </div>
+      </div>
+
+  </nav>
+</header>
   <!-- header end -->
 
 
@@ -427,6 +226,7 @@ navLinks.classList.toggle("show3");
            </svg></span>
          </a>
        </div>
+    </div>
 <!-- carosel end -->
 <!-- facilities start -->
 <section class="facili-one wide-100">
@@ -639,6 +439,48 @@ navLinks.classList.toggle("show3");
         </div>
     </div>
 </footer>
-  
+          <script>
+            
+            // search-box open close js code
+          let navbar = document.querySelector(".navbar");
+          let searchBox = document.querySelector(".search-box .bx-search");
+          // let searchBoxCancel = document.querySelector(".search-box .bx-x");
+
+          searchBox.addEventListener("click", ()=>{
+            navbar.classList.toggle("showInput");
+            if(navbar.classList.contains("showInput")){
+              searchBox.classList.replace("bx-search" ,"bx-x");
+            }else {
+              searchBox.classList.replace("bx-x" ,"bx-search");
+            }
+          });
+
+          // sidebar open close js code
+          let navLinks = document.querySelector(".nav-links");
+          let menuOpenBtn = document.querySelector(".navbar .bx-menu");
+          let menuCloseBtn = document.querySelector(".nav-links .bx-x");
+          menuOpenBtn.onclick = function() {
+          navLinks.style.left = "0";
+          }
+          menuCloseBtn.onclick = function() {
+          navLinks.style.left = "-100%";
+          }
+
+
+          // sidebar submenu open close js code
+          let htmlcssArrow = document.querySelector(".htmlcss-arrow");
+          htmlcssArrow.onclick = function() {
+          navLinks.classList.toggle("show1");
+          }
+
+          let jsArrow = document.querySelector(".js-arrow");
+          jsArrow.onclick = function() {
+          navLinks.classList.toggle("show3");
+          }
+          let otherArrow = document.querySelector(".other-arrow");
+          otherArrow.onclick = function() {
+          navLinks.classList.toggle("show4");
+          }
+          </script>
 </body>
 </html>
