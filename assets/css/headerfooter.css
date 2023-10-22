@@ -96,7 +96,7 @@
   }
   .navbar .logo a{
    font-size: 30px;
-   color: #00a3c8;
+   color: black;
    text-decoration: none;
    font-weight: 600;
   }
@@ -119,7 +119,7 @@
    height: 100%;
    text-decoration: none;
    white-space: nowrap;
-   color: #00a3c8;
+   color:black;
    font-size: 15px;
    font-weight: 500;
   }
@@ -136,9 +136,10 @@
    line-height: 70px;
    text-align: center;
    display: inline-block;
-   color: #00a3c8;
+   color: black;
    transition: all 0.3s ease;
   }
+ 
   nav .navbar .links li .sub-menu{
    position: absolute;
    top: 70px;
@@ -160,8 +161,14 @@
    padding: 0 22px;
    border-bottom: 1px solid rgba(255,255,255,0.1);
   }
+  .navbar .links li .sub-menu li:hover{
+    background-color: #00a3c8;
+   }
+  .navbar .links li .sub-menu a:hover{
+    color: white;
+   }
   .navbar .links li .sub-menu a{
-   color: #00a3c8;
+   color: black;
    font-size:15px;
    font-weight: 500;
   }
@@ -178,7 +185,7 @@
    line-height: 40px;
    text-align: center;
    font-size: 22px;
-   color: #00a3c8;
+   color: black;
    font-weight: 600;
    cursor: pointer;
    transition: all 0.3s ease;
