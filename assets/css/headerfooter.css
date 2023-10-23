@@ -72,6 +72,7 @@
   .logo a{
    display: flex;
   }
+ 
   nav{
    /* position: fixed;
    top: 54px;
@@ -123,6 +124,11 @@
    font-size: 15px;
    font-weight: 500;
   }
+  nav .navbar .links li a:hover{
+   
+    color:#00a3c8;
+   
+   }
   .links li:hover .htmlcss-arrow,
   .links li:hover .js-arrow,
   .links li:hover .other-arrow{
