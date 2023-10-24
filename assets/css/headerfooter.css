@@ -184,6 +184,13 @@
     height: 40px;
    width: 40px;
   }
+  @media (min-width:1440px)
+  {
+    .search-box{
+      display: none;
+    }
+  }
+ 
   .navbar .search-box i{
    position: absolute;
    height: 100%;
@@ -191,7 +198,7 @@
    line-height: 40px;
    text-align: center;
    font-size: 22px;
-   color: black;
+   color:#00a3c8;
    font-weight: 600;
    cursor: pointer;
    transition: all 0.3s ease;
