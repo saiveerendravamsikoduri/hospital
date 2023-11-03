@@ -200,7 +200,7 @@
       padding-right: 0px;
     }
     .carousel{
-        margin-top: 70px;
+        margin-top: 120px;
      }
 
      .place_inner{
@@ -242,7 +242,7 @@
       }
       .inner-in-carosel-image{
         width: 100%;
-        height: 50vh;
+        height: 40vh;
         margin-top: 20%;
         margin-bottom: 10%;
     
@@ -410,97 +410,3 @@ color: #222;
 }
 
 
-/* departments */
-#department_sec a{
-  text-decoration:none;
-  }	
-  .wide-70 {
-      padding-top: 100px;
-      padding-bottom: 20px;
-  }
-  .department-title {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #2272ad;
-  }
-  .department-title h3.h3-md {
-      line-height: 1;
-      margin-bottom: 20px;
-  }
-  .depinfo {
-      text-align: center;
-      margin-bottom: 30px;
-      background-color: #dd3333;
-      border: 1px solid #ccc;
-      padding: 40px 10px;
-      -webkit-border-radius: 6px;
-      -moz-border-radius: 6px;
-      border-radius: 6px;
-      -webkit-transition: all 300ms ease-in-out;
-      -moz-transition: all 300ms ease-in-out;
-      -o-transition: all 300ms ease-in-out;
-      -ms-transition: all 300ms ease-in-out;
-      transition: all 300ms ease-in-out;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  .depinfo a {
-      color: #333;
-      text-decoration: none;
-      -webkit-transition: all 400ms ease-in-out;
-      -moz-transition: all 400ms ease-in-out;
-      -o-transition: all 400ms ease-in-out;
-      -ms-transition: all 400ms ease-in-out;
-      transition: all 400ms ease-in-out;
-  }
-  .depinfo-icon {
-      color: #00a3c8;
-      -webkit-transition: all 300ms ease-in-out;
-      -moz-transition: all 300ms ease-in-out;
-      -o-transition: all 300ms ease-in-out;
-      -ms-transition: all 300ms ease-in-out;
-      transition: all 300ms ease-in-out;
-  }
-  .depinfo h5 {
-      letter-spacing: -0.5px;
-      margin-top: 25px;
-      margin-bottom: 0;
-      -webkit-transition: all 300ms ease-in-out;
-      -moz-transition: all 300ms ease-in-out;
-      -o-transition: all 300ms ease-in-out;
-      -ms-transition: all 300ms ease-in-out;
-      transition: all 300ms ease-in-out;
-      color: #fff;
-      letter-spacing: 1px;
-  }
-  
-  .depinfo h5.h5-sm {
-      font-size: 1.1875rem;
-  }
-  .depinfo:hover{
-      -webkit-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-      -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-      background-color: #2272ad;
-  }
-  .depinfo:hover .depinfo-icon {
-      color: #fff;
-  }
-  
-  .depinfo:hover .depinfo-icon {
-      -webkit-transform: translate3d(0, 40px, 0);
-      transform: translate3d(0, 55px, 0);
-  }
-  .depinfo:hover h5.depinfo-title {
-      -webkit-transform: translate3d(0, -110px, 0);
-      transform: translate3d(0, -110px, 0);
-      color: #fff;
-  }
-  
-  @media only screen and (min-width: 580px){
-  .depinfo {
-      padding: 29px 10px;
-  }
-  }
-  

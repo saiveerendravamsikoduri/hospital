@@ -1,57 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card with Content</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        .card {
-            margin: 20px;
-        }
+  <title>Department</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="css/navbar.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <style>
+  
+/*--------------------------------------------------------------
+# More Services
+--------------------------------------------------------------*/
+.more-services img {
+  border-radius: 0;
+}
 
-        .card-body {
-            display: flex;
-            align-items: center;
-        }
+.more-services .card {
+    border: 0;
+    text-align: ceneter;
+    box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+    transition: all 0.3s ease-in-out;
+    border-radius: 15px;
+    text-align: center;
+    border-bottom: 3px solid #fff;
+}
+.more-services .card:hover {
+        transform: translateY(-5px);
+		border-color:#3fbbc0;
 
-        .card-img-top {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-right: 20px;
-        }
-    </style>
-</head>
+}
 
-<body>
-    <div class="container">
-        <div class="row mt-5">
-            <div class="col-md-6">
-                <div class="card">
-                    <img src="../images/IMG_20231024_113215197.jpg" class="img-thumbnail" alt="Founder">
-                    <div class="card-body">
-                        <h5 class="card-title">Hospital Founder</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="container">
-                    <h2>Additional Information</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis.</p>
-                    <p>Additional content can go here.</p>
-                </div>
-            </div>
+
+.more-services .card-body {
+  -moz-text-align-last: center;
+  text-align-last: center;
+}
+
+.more-services .card-title a {
+  font-weight: 600;
+  font-size: 18px;
+  color: #334240;
+  transition: ease-in-out 0.3s;
+}
+
+.more-services .card-title a:hover {
+  color: #1bbca3;
+}
+
+.more-services .btn {
+  border-radius: 50px;
+  padding: 4px 30px 6px 30px;
+  border: 2px solid #1bbca3;
+}
+
+.more-services .btn:hover {
+  color: #fff;
+  background: #1bbca3;
+}
+
+  </style>
+  </head>
+  <body>
+  <section class="more-services section-bg">
+      <div class="container">
+
+        <div class="row">
+			<div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
+				<div class="card">
+				  <img src="img/Departments/Physiotherapy.jpg" class="card-img-top" alt="...">
+				  <div class="card-body">
+					<h5 class="card-title"><a href="">Pysiotherapy</a></h5>
+					<p class="card-text">Physiotherapy, also known as physical therapy, is a healthcare profession that helps people recover from injuries, manage chronic conditions,</p>
+					<a href="#" class="btn">Explore more</a>
+				  </div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
+				<div class="card">
+				  <img src="img/Departments/orthopedic.jpg" class="card-img-top" alt="...">
+				  <div class="card-body">
+					<h5 class="card-title"><a href="">Orthopedic</a></h5>
+					<p class="card-text">Orthopedics is a division of medicinefocusing on the consideration of the musculoskeletal system. This framework is comprised of muscles</p>
+					<a href="#" class="btn">Explore more</a>
+				  </div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
+				<div class="card">
+				  <img src="" class="card-img-top" alt="...">
+				  <div class="card-body">
+					<h5 class="card-title"><a href="">Neurology</a></h5>
+					<p class="card-text">Physiotherapy, also known as physical therapy, is a healthcare profession that helps people recover from injuries, manage chronic conditions,</p>
+					<a href="#" class="btn">Explore more</a>
+				  </div>
+				</div>
+			</div>
+         
+          </div>
+         
         </div>
-    </div>
 
-    <!-- Bootstrap and JavaScript libraries -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+      </div>
+    </section>
+	</body>
+	</html>

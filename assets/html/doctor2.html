@@ -14,50 +14,119 @@
 		<link rel="stylesheet" href="../css/headerfooter.css">
 		<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 		<link rel="text/css" href="../css/doctors.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 <style>
-	.doc-info__col-1 img {
+     .doc-info__tabs {
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 95%;
+	padding:0;
+}
+.doc-info__tab_item {
+    list-style-type: none;
+    padding-bottom: 1em;
+    border-bottom: 0.7px solid #e0e0e0;
+}
+.doc-info__tab_item a {
+    font-family: Plus Jakarta Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #757575;
+	text-decoration:none;
+}
+.doc-info__tab_item:hover a {
+  color: #1977cc;
+    border-bottom: 1px solid #1977cc;
+}
+
+.d-p-info_col-3scroll-tabs_item--active {
+    border-bottom: 0.7px solid #004e9e;
+}
+.doc-info__col-3 {
+    flex: 0 0 23%;
+    border: 1px solid black;
+    background: #ffffff;
+    border: 1px solid #bdbdbd;
+    border-radius: 20px;
+    padding: 2em;
+}
+@media screen and (min-width: 1366px) and (max-width: 1439px){
+.doc-info__tab_item {
+    padding: 1.25em 0 1em;
+}
+.doc-info__tab_item a {
+    font-size: 14px!important;
+}
+}
+
+
+.d-p-info__col-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 30.5%;
+}
+.d-p-info__col-1 img {
     width: 100%;
     aspect-ratio: 1;
     border-radius: 10px;
 }
 
-/* SECOND COLUMN */
-.doc-info__col-2 {
+ 
+ .d-p-info__col-2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex: 0 0 36.5%;
 }
 
-
-
-.doc__designation {
+@media screen and (min-width: 1366px) and (max-width: 1439px){
+.d-p-info__name {
+    margin-bottom: 0.5em;
+}
+}
+.d-p-info__name {
+    line-height: 40px!important;
+    font-size: 32px;
+    margin-bottom: 1em;
+}
+.d-p-info__designation {
+    font-family: Plus Jakarta Sans Bold;
     font-size: 24px;
     font-weight: 600;
     line-height: 30px;
     margin-bottom: 0.25em;
 }
-.doc__speciality {
+.d-p-info__speciality {
+    font-family: Plus Jakarta Sans;
     font-size: 20px;
     font-weight: 400;
     line-height: 25px;
     margin-bottom: 0.5em;
-}		
-.doc__location {
+}
+.d-p-info__location {
+    font-family: Plus Jakarta Sans;
     font-size: 14px;
     font-weight: 400;
     line-height: 17px;
     letter-spacing: 0em;
     text-align: left;
 }
-
-/* Years of Experience */
-.doc-exp__btn-wrapper {
+.section-heading {
+    font-family: Plus Jakarta Sans Semi Bold;
+    font-weight: 600!important;
+    font-size: 36px;
+    line-height: 30.5px;
+}
+.d-p-info__btn-wrapper {
     display: flex;
     gap: 2em;
 }
-.doc-exp_btn-wrapper_btn {
+.d-p-info_btn-wrapper_btn {
     display: block;
     min-height: 50px;
     min-width: 133px;
@@ -74,7 +143,7 @@
     font-size: 12px;
     gap: 0.5em;
 }
-.doc-exp_btn-wrapper_btn span {
+.d-p-info_btn-wrapper_btn span {
     font-family: Plus Jakarta Sans;
     font-style: normal;
     font-weight: 700;
@@ -82,154 +151,115 @@
     line-height: 25px;
     color: #004e9e;
 }
-/*------------------------------------ Years of Experience ends--------------------------- */
-
-.doc__selectbox select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    position: relative;
-    background: transparent;
-    background-image: url(data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.0007 13.1714L16.9505 8.22168L18.3647 9.63589L12.0007 15.9999L5.63672 9.63589L7.05094 8.22168L12.0007 13.1714Z' fill='black'/%3E%3C/svg%3E%0A)!important;
-    background-repeat: no-repeat!important;
-    background-size: 25px;
-    background-position: calc(100% - 1em)!important;
-    padding-right: 2em!important;
-}
-.doc_selectbox input, .doc_selectbox select {
-    min-height: 50px;
-    border: 1.7px solid #e0e0e0;
-    background-color: #fafafa;
-    border-radius: 10px;
-    width: 50%;
-    padding: 0 1em;
-    outline: none;
-}
-.doc__selectbox{
-    margin-bottom: 16px;
-}
-input, select {
-    font-weight: 500;
-    font-size: 12px;
-}
-/* Book a Physical Consultation */
-.doc__appointment-wrapper {
+.d-p-info__appointment-wrapper {
     display: flex;
     flex-direction: column;
     gap: 1em;
 }
-.doc_appointment-wrapper_btn {
+.d-p-info_appointment-wrapper_btn {
     display: flex;
     align-items: center;
     gap: 0.5em;
     cursor: pointer;
 }
-.doc_appointment-wrapper_btn span {
+.d-p-info_appointment-wrapper_btn span {
+    font-family: Plus Jakarta Sans Bold;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     color: #020202;
-}		
-/* Book a Physical Consultation	 Ends	 */
-		
-		
-/* THIRD COLUMN	 */
-.doc-info__col-3 {
-   flex: 0 0 23%;
-    border: 1px solid black;
-    background: #ffffff;
-    border: 1px solid #bdbdbd;
-    border-radius: 20px;
-    padding: 1px;
-}
-
-/* UNORDERED LIST */
-.doc-info_col-3_scroll-tabs {
-    min-height: 30vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 95%;
-}
-
-.doc-info_col-3scroll-tabs_item--active {
-    border-bottom: 0.7px solid #004e9e;
-}
-.doc-info_col-3scroll-tabs_item {
-    list-style-type: none;
-    padding-bottom: 1em;
-    border-bottom: 0.7px solid #e0e0e0;
-}
-
-.doc-info_col-3scroll-tabs_item--active a {
-    color: #004e9e;
-    font-weight: 600;
-}
-.doc-info_col-3scroll-tabs_item a {
-    font-family: Plus Jakarta Sans;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    color: #757575;
-}
-.doc-info_col-3scroll-tabs_item a:hover{
-	    text-decoration: none;
-}
-@media screen and (min-width: 1366px) and (max-width: 1439px){
-.d-p-info_col-3scroll-tabs_item {
-    padding: 1.25em 0 1em;
-}
-.d-p-info_col-3scroll-tabs_item a {
-    font-size: 14px!important;
-}
 }
 
 
+ .accordion_sec	 {
+     background-color: #f9f9fa
+ }
 
-.doc-info {
-    width: 85%;
-    width: 88.5%;
-    margin: 0 auto 0 7.5%;
-    min-height: 30vh;
-    display: flex;
-    justify-content: space-between;
-    gap: 3.5em;
-   padding-top: 50px;
-    padding-bottom: 50px;
-}
-@media screen and (max-width: 391px){
-.doc-info {
-    flex-direction: column;
-    width: 85%;
-    margin: 0 auto;
-    gap: 3em;
+ .flex {
+     -webkit-box-flex: 1;
+     -ms-flex: 1 1 auto;
+     flex: 1 1 auto
+ }
+
+ @media (max-width:991.98px) {
+     .padding {
+         padding: 1.5rem
+     }
+ }
+
+ @media (max-width:767.98px) {
+     .padding {
+         padding: 1rem
+     }
+ }
+
+ .padding {
+     padding: 5rem
+ }
+
+ .card {
+     box-shadow: none;
+     -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+     -ms-box-shadow: none
+ }
+
+ .pl-3,
+ .px-3 {
+     padding-left: 1rem !important
+ }
+
+ .card {
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     min-width: 0;
+     word-wrap: break-word;
+     background-color: #fff;
+     background-clip: border-box;
+     border: 1px solid #d2d2dc;
+     border-radius: 0
+ }
+
+ .card .card-title {
+     color: #000000;
+     margin-bottom: 0.625rem;
+     text-transform: capitalize;
+     font-size: 0.875rem;
+     font-weight: 500
+ }
+
+ .card .card-description {
+     margin-bottom: .875rem;
+     font-weight: 400;
+     color: #76838f
+ }
+ 
+ .accordion .card:first-of-type {
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
-}
-	.doc-details_sec{
-	padding-bottom: 50px;
-	
-}
-.doc_accordion .card {
+.accordion .card {
     margin-bottom: .75rem;
     box-shadow: 0px 1px 15px 1px rgba(230, 234, 236, 0.35);
     border-radius: .25rem;
     border: none;
-	 background: transparent;
 }
 
-.doc_accordion .card .card-header {
+.accordion .card .card-header {
     background-color: transparent;
     border: none;
     padding: 2rem;
-	border-bottom: 0.7px solid #004e9e;
-    position: relative;
-    cursor: pointer;
 }
 
+.card-header:first-child {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
 
-.doc_accordion .card .card-header * {
+.accordion .card .card-header * {
     font-weight: 400;
     font-size: 1rem;
 }
@@ -238,7 +268,7 @@ input, select {
     margin-bottom: 0 !important;
 }
 
-.doc_accordion .card .card-header a {
+.accordion .card .card-header a {
     display: block;
     color: inherit;
     text-decoration: none;
@@ -250,53 +280,41 @@ input, select {
     -o-transition: color 0.5s ease;
     transition: color 0.5s ease;
     padding-right: 1.5rem;
-	font-size: 24px;
-    font-weight: 600;
 }
 
-.doc_accordion .card .card-header a[aria-expanded="false"]:before {
+.accordion .card .card-header * {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.accordion .card .card-header a[aria-expanded="false"]:before {
     content: "+";
 }
 
-.doc_accordion .card .card-header a[aria-expanded="true"]:before {
+.accordion .card .card-header a[aria-expanded="true"]:before {
     content: "-";
 }
 
-.doc_accordion .card .card-header a:before {
+.accordion .card .card-header a:before {
+    
     position: absolute; 
     right: 7px;
     top: 0;
     font-size: 18px;
     display: block;
     font-family: FontAwesome;
+      
      display: inline-block;
      padding-right: 3px;
      vertical-align: middle;
-     font-size: 26px;
-     color: #000;
-}
-.doc-achievement__details {
-    padding: 0 5.5em;
-    font-family: Plus Jakarta Sans;
-    margin-top: 1em;
-    max-height: 0em;
-    transition: all .5s;
-      max-height: 80rem;
-    padding-bottom: 1rem;
-}
-.doc-achievement__details ul li {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    color: #212121;
-    padding: 0.5em 0;
+     font-size: .756em;
+     color: #405189
 }
 </style>
 </head>
 <body>
 
-	       <!-- header start -->
+	                <!-- header start -->
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
       <div class="align-items-center d-none d-md-flex">
@@ -358,9 +376,8 @@ input, select {
 
 
 
-
 	<!-- -----------------------------------------Breadcrumbs Starts--------------------------------------------------------- -->		
-	<div class="breadcrumb-wrap bg-f br-2">
+	<div class="breadcrumb-wrap bg-f br-2 ">
 		<div class="container">
 			<div class="breadcrumb-title">
 				<h2>Our Doctors</h2>
@@ -372,163 +389,182 @@ input, select {
 		</div>
 	</div>
 <!-- -----------------------------------------Breadcrumbs ends--------------------------------------------------------- -->	
-
-<!-- -----------------------------------------Doctor Infromation starts--------------------------------------------------------- -->	
-<div class="doc-info">
-<div class="doc-info__col-1">
-	<img alt="" src="../images/dr pic.JPG">
-</div>
-
-<div class="doc-info__col-2">
-	<div>
-		<h1 class="section-heading doc__name"> Dr B Sai Tejaswi </h1>
-		<p class="doc__designation">Consultant, Physiotheraphist</p>
-		<p class="doc__speciality"> Physiotheraphist   </p>
-		<p class="doc__location"> Mandapeta<span style="padding:0px 0.25em">|</span> Konasema District </p>
-	</div>
-	<div class="doc-exp__btn-wrapper">
-		 <p class="doc-exp_btn-wrapper_btn"> <span>--</span> Years of Experience</p>
-	</div>
-	
-	<div class="doc__appointment-wrapper">
-		<a data-name="Dr. Ramesh Gudapati" data-speciality="" data-branch="Financial District" href="" class="doc_appointment-wrapper_btn">
-			<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M7.14702 0V2H13.2446V0H15.2771V2H19.3421C19.9034 2 20.3584 2.44772 20.3584 3V19C20.3584 19.5523 19.9034 20 19.3421 20H1.04946C0.488203 20 0.0332031 19.5523 0.0332031 19V3C0.0332031 2.44772 0.488203 2 1.04946 2H5.1145V0H7.14702ZM18.3259 10H2.06572V18H18.3259V10ZM6.13076 12V14H4.09824V12H6.13076ZM11.2121 12V14H9.17954V12H11.2121ZM16.2934 12V14H14.2608V12H16.2934ZM5.1145 4H2.06572V8H18.3259V4H15.2771V6H13.2446V4H7.14702V6H5.1145V4Z" fill="#E3000F"></path>
-			</svg>
-			<span>Book a Physical Consultation</span>
-		</a>
-	</div>
-</div>
-
-<div class="doc-info__col-3">
-	<ul class="doc-info_col-3_scroll-tabs">
-		<li class="doc-info_col-3scroll-tabsitem doc-info_col-3scroll-tabs_item--active">
-			<a class="collapsed" data-toggle="collapse" href="#qualification" aria-expanded="false" 
-				aria-controls="qualification" data-abc="true" >Qualifications
-			</a>
-		</li>
-		<li class="doc-info_col-3scroll-tabs_item">
-			<a  class="collapsed" data-toggle="collapse" href="#experience" aria-expanded="false" 
-				aria-controls="experience" data-abc="true">Experience
-			</a>
-		</li>
-		<li class="doc-info_col-3scroll-tabs_item">
-			<a  class="collapsed" data-toggle="collapse" href="#expertise" aria-expanded="false" 
-				aria-controls="expertise" data-abc="true">Field of Expertise
-			</a>
-		</li>
-		<li class="doc-info_col-3scroll-tabs_item">
-			<a  data-toggle="collapse" href="#research" aria-expanded="false" 
-				aria-controls="research" data-abc="true" class="collapsed">Research &amp; Publications
-			</a>
-		</li>
-		<li class="doc-info_col-3scroll-tabs_item">
-			<a  data-toggle="collapse" href="#certifications" aria-expanded="false" 
-				aria-controls="certifications" data-abc="true" class="collapsed">Certifications &amp; Memberships
-			</a>
-		</li>
-	</ul>
-</div>
-</div>
-<!-- -----------------------------------------Doctor Infromation ends--------------------------------------------------------- -->
-
-<!-- -----------------------------------------Accodion Starts--------------------------------------------------------- -->
-<div class="doc-details_sec" id="doctor_details">
-	<div class="row container d-flex justify-content-center">
-		<div class="col-lg-10">
-			<div class="doc_accordion mt-4" id="accordion" role="tablist">
-				<div class="card">
-					<div class="card-header" role="tab" id="heading-1">
-						<h6 class="mb-0">
-			  
-							<a data-toggle="collapse" href="#qualification" aria-expanded="false" aria-controls="qualification" data-abc="true" class="collapsed">
-								Qualifications
-							</a>
-						</h6>
-					</div>
-					<div id="qualification" class="collapse" role="tabpanel" aria-labelledby="heading-1" data-parent="#accordion" style="">
-						<div class="card-body">
-							<div class="doc-achievement__details">
-								<ul><li>BPT GSL Medical College</li><li>DYT Nannaya University</li>
-								</ul>
-								
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-header" role="tab" id="heading-2">
-						<h6 class="mb-0">
-							<a class="collapsed" data-toggle="collapse" href="#experience" aria-expanded="false" aria-controls="experience" data-abc="true">
-							Experience
-							</a>
-						</h6>
-					</div>
-					<div id="experience" class="collapse" role="tabpanel" aria-labelledby="heading-2" data-parent="#accordion">
-						<div class="card-body">
-							<p>----</p>
-						</div>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-header" role="tab" id="heading-3">
-						<h6 class="mb-0">
-							<a class="collapsed" data-toggle="collapse" href="#expertise" aria-expanded="false" aria-controls="expertise" data-abc="true">
-							Field of Expertise
-							</a>
-						</h6>
-					</div>
-					<div id="expertise" class="collapse" role="tabpanel" aria-labelledby="heading-3" data-parent="#accordion">
-						<div class="card-body">
-							<ul>
-								<li>
-									physio dry needling
-								</li>
-								<li>
-									cupping theraphy
-								</li>
-								<li>
-									chirotheraphy
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			  
-				<div class="card">
-					<div class="card-header" role="tab" id="heading-4">
-						<h6 class="mb-0">
-							<a class="collapsed" data-toggle="collapse" href="#research" aria-expanded="false" aria-controls="research" data-abc="true">
-							Research & Publications
-							</a>
-						</h6>
-					</div>
-					<div id="research" class="collapse" role="tabpanel" aria-labelledby="heading-4" data-parent="#accordion">
-						<div class="card-body">
-							<p class="mb-0">Role of Physiotheraphy Management in swimmer shoulder</p>
-						</div>
-					</div>
-				</div>
-		  
-				<div class="card">
-					<div class="card-header" role="tab" id="heading-5">
-						<h6 class="mb-0">
-							<a class="collapsed" data-toggle="collapse" href="#certifications" aria-expanded="false" aria-controls="certifications" data-abc="true">
-								Certifications & Memberships
-							</a>
-						</h6>
-					</div>
-					<div id="certifications" class="collapse" role="tabpanel" aria-labelledby="heading-5" data-parent="#accordion">
-						<div class="card-body">
-							<p class="mb-0">APPTA</p>
-						</div>
-					</div>
-				</div>
-			</div> 
-		</div>
-	</div>        
-</div>
-
+<!-- doctors info start -->
+<section class="" style="padding-bottom: 78px; padding-top: 20px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="d-p-info__col-1">
+                    <img  alt="" src="../images/dr pic.jpg">
+        
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-p-info__col-2">
+                    <div>
+                        <h1 class="section-heading d-p-info__name">Dr B Sai Tejaswi </h1>
+                        <p class="d-p-info__designation">Consultant, PHYSIOTHERAPHIST</p>
+                        <p class="d-p-info__speciality"> PHYSIOTHERAPHIST</p>
+                        <p class="d-p-info__location">Mandapeta</p>
+                    </div>
+                    <div class="d-p-info__btn-wrapper">
+                         <p class="d-p-info_btn-wrapper_btn"> <span>7</span> Years of Experience</p>
+                    </div>
+                    <div class="d-p-info__appointment-wrapper">
+                        <a data-name="Dr. Ramesh Gudapati" data-speciality="" data-branch="Financial District" href="form.html" class="d-p-info_appointment-wrapper_btn">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.14702 0V2H13.2446V0H15.2771V2H19.3421C19.9034 2 20.3584 2.44772 20.3584 3V19C20.3584 19.5523 19.9034 20 19.3421 20H1.04946C0.488203 20 0.0332031 19.5523 0.0332031 19V3C0.0332031 2.44772 0.488203 2 1.04946 2H5.1145V0H7.14702ZM18.3259 10H2.06572V18H18.3259V10ZM6.13076 12V14H4.09824V12H6.13076ZM11.2121 12V14H9.17954V12H11.2121ZM16.2934 12V14H14.2608V12H16.2934ZM5.1145 4H2.06572V8H18.3259V4H15.2771V6H13.2446V4H7.14702V6H5.1145V4Z" fill="#E3000F"></path>
+                            </svg>
+                            <span>Book a Physical Consultation</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="doc-info__col-3">
+                    <ul class="doc-info__tabs">
+                        <!-- <a href="" class="doc-info_appointment-wrapper_btn"></a> -->
+                        <li class="doc-info__tab_item">
+                            <a data-toggle="collapse" href="#Qualifications" aria-expanded="false" aria-controls="Qualifications" 
+                                data-abc="true" class="collapsed" onclick="scrollToSection('section1')">Qualifications </a>
+                        </li>
+                        <li class="doc-info__tab_item">
+                         <a data-toggle="collapse" href="#Experience" aria-expanded="false" aria-controls="Experience" 
+                            data-abc="true" class="collapsed" onclick="scrollToSection('section2')">Experience </a>
+                        </li>
+                        <li class="doc-info__tab_item">
+                            <a data-toggle="collapse" href="#Expertise" aria-expanded="false" aria-controls="Expertise" 
+                                data-abc="true" class="collapsed" onclick="scrollToSection('section3')"> Field of Expertise </a>
+                        </li>
+                        <li class="doc-info__tab_item">
+                            <a data-toggle="collapse" href="#Research" aria-expanded="false" aria-controls="Research" 
+                                data-abc="true" class="collapsed" onclick="scrollToSection('section4')"> Research &amp; Publications </a>
+                        </li>
+                        <li class="doc-info__tab_item"  >
+                            <a data-toggle="collapse" href="#Certifications" aria-expanded="false" aria-controls="collapse-2" 
+                                data-abc="true" class="collapsed" onclick="scrollToSection('section5')">Certifications &amp; Memberships</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="accordion_sec">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-10">
+                <div class="mt-4">
+                    <div class="accordion" id="accordion" role="tablist">
+                        <div class="card">
+            <div id="section1"></div>
+                            <div class="card-header" role="tab" id="heading-1">
+                              <h6 class="mb-0">
+                                <a data-toggle="collapse" href="#Qualifications" aria-expanded="false" aria-controls="Qualifications" data-abc="true" class="collapsed">
+                                  Qualifications
+                                </a>
+                              </h6>
+                            </div>
+                            <div id="Qualifications" class="collapse" role="tabpanel" aria-labelledby="heading-1" data-parent="#accordion" style="">
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-3">
+                                    <img src="../images/qualifications_doc.png" class="mw-100" alt="image">                              
+                                  </div>
+                                  <div class="col-9">
+                                    <p class="mb-0"><ul><li>bpt </li><li>dyt - capi </li></ul></p>                          
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>	<!-- 1st card ends -->
+                        <div class="card">
+            <div id="section2"></div>
+                            <div class="card-header" role="tab" id="heading-2">
+                              <h6 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" href="#Experience" aria-expanded="false" aria-controls="Experience" data-abc="true">
+                                 Experience
+                                </a>
+                              </h6>
+                            </div>
+                            <div id="Experience" class="collapse" role="tabpanel" aria-labelledby="heading-2" data-parent="#accordion">
+                              <div class="card-body">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="../images/exp_doc.png" class="mw-100" alt="image">                              
+                                      </div>
+                                    <div class="pl-3 mt-4 col-9">
+                                        -----
+                                    </div>
+                                </div>
+                                
+                              </div>
+                            </div>
+                        </div>  <!-- 2nd card ends -->
+                        <div class="card">
+            <div id="section3"></div>
+                            <div class="card-header" role="tab" id="heading-3">
+                              <h6 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" href="#Expertise" aria-expanded="false" aria-controls="Expertise" data-abc="true">
+                                  Field of Expertise
+                                </a>
+                              </h6>
+                            </div>
+                            <div id="Expertise" class="collapse" role="tabpanel" aria-labelledby="heading-3" data-parent="#accordion">
+                              <div class="card-body">
+                                <p class="mb-0">PHYSIOTHERAPHIST</p>
+                              </div>
+                            </div>
+                        </div>  <!-- 3rd card ends --> 
+                        <div class="card">
+                            <div class="card-header" role="tab" id="heading-4">
+                              <h6 class="mb-0">
+                                <a data-toggle="collapse" href="#Research" aria-expanded="false" aria-controls="Research" data-abc="true" class="collapsed">
+                                 Research &amp; Publications
+                                </a>
+                              </h6>
+                            </div>
+                            <div id="Research" class="collapse" role="tabpanel" aria-labelledby="heading-1" data-parent="#accordion" style="">
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-3">
+                                    <img src="../images/research_doc.png" class="mw-100" alt="image">                              
+                                  </div>
+                                  <div class="col-9">
+                                    <p>role of physiotheraphy management in swimmer shoulder</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>  <!-- 4th card ends -->
+                        <div class="card" id="section4">
+                            <div class="card-header" role="tab" id="heading-4">
+                              <h6 class="mb-0">
+                                <a data-toggle="collapse" href="#Certifications" aria-expanded="false" aria-controls="Certifications" data-abc="true" class="collapsed">
+                                Certifications &amp; Memberships
+                                </a>
+                              </h6>
+                            </div>
+                            <div id="Certifications" class="collapse" role="tabpanel" aria-labelledby="heading-1" data-parent="#accordion" style="">
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-3">
+                                    <img src="https://img.icons8.com/bubbles/100/000000/administrator-male.png" class="mw-100" alt="image">                              
+                                  </div>
+                                  <div class="col-9">
+                                    <p class="mb-0"> appta member</p>                          
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>  <!-- 5th card ends -->
+                     </div> <!-- accordion ends -->
+                </div> 
+            </div>
+        </div> <!-- row ends --> 
+    </div> <!-- container ends -->
+</section>
+<div id="section5"></div>
 <!-- -----------------------------------------Accodion ends--------------------------------------------------------- -->
 
 <!-- -----------------------------------------Footer Starts--------------------------------------------------------- -->
@@ -607,6 +643,12 @@ input, select {
             </div>
         </div>
     </footer>
+    <script>
+        function scrollToSection(sectionId) {
+               var section = document.getElementById(sectionId);
+               section.scrollIntoView({ behavior: 'smooth' });
+           }
+     </script>
 	<script src="../javascript/header.js"></script> 
 </body>
 </html>
